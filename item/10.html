@@ -1,0 +1,1445 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi">
+  <meta name="renderer" content="webkit">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>FGO Items</title>
+  
+  <!-- <link rel="stylesheet" type="text/css" href="/static/css/layout.css"> -->
+  <style type="text/css">
+
+    /* Layout */
+    html, body {
+      overflow:hidden;
+      overflow-y:auto;
+      overflow-x:hidden;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    a, 
+    a:hover,
+    a:link,
+    a:active,
+    a:visited
+     {
+      text-decoration : none;
+    } 
+    
+    .flex-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+
+      margin: 50px;
+    }
+    /* Layout */
+
+
+    .heads {
+      width: 80%;
+      margin-top: 10px;
+    }
+
+    .head-img{
+      width: 97px;
+      height: 106px;
+      background-size: 97px, 106px;
+      margin: 4px 10px;
+    }
+
+    .items {
+      width: 70%;
+      margin: auto;
+      margin-top: 30px;
+    }
+
+    .item {
+
+    }
+
+    .item img{
+      width: 97px;
+      height: 106px;
+      margin: 10px;
+    }
+    
+
+    .item-back {
+      margin-left: 3%;
+      margin-top: 30px;
+    }
+
+    .num {
+      position: relative;
+      top: 60%;
+      color: white;
+      font-weight: bold;
+      -webkit-filter:
+         drop-shadow(1px 0px 0px black)
+         drop-shadow(0px 1px 0px black)
+         drop-shadow(0px -1px 0px black)
+         drop-shadow(-1px 0px 0px black);
+      filter:
+         drop-shadow(1px 0px 0px black)
+         drop-shadow(0px 1px 0px black)
+         drop-shadow(0px -1px 0px black)
+         drop-shadow(-1px 0px 0px black);
+    }
+
+    .num-1 {
+      left: 85%
+    }
+    .num-2 {
+      left: 75%;
+    }
+    .num-3 {
+      left: 65%
+    }
+
+    @media screen and (max-width:  450px) {
+      .flex-container{
+        margin: 20px 10px;
+      }
+      .heads {
+        width: 90%;
+      }
+      .head-img {
+        width: 55px;
+        height: 60px;
+        background-size: 55px, 60px;
+        background-repeat: no-repeat;
+        margin: 4px 10px;
+      }
+      .items {
+        width: 90%;
+      }
+      .item img {
+        width: 55px;
+        height: 60px;
+        margin: 4px 10px;
+      }
+      .item .back {
+        width: 60px;
+        height: 66px; 
+      }
+      .num {
+        font-size: 10px;
+      }
+      .num-1 {
+        left: 80%
+      }
+      .num-2 {
+        left: 70%;
+      }
+      .num-3 {
+        left: 60%
+      }
+
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+  <ul class="nav nav-tabs">
+    <li class="nav-tab item"><a href="../item.html">Items</a></li>
+    <li class="nav-tab servant"><a href="../servant.html">Servants</a></li>
+  </ul>
+
+  <div id="content">
+    <div class="item back">
+      <a href="../item.html">
+        <img src="http://file.fgowiki.fgowiki.com/fgo/material/cubes.jpg">
+      </a>
+    </div>
+
+    <div>
+
+        <div class="skill flex-container">
+        
+          <h3 class="total">skill: 531</h3>
+
+          <div class="flex-container heads">
+              <div class="flex-item head">
+                <a href="../servant/002.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/002.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/008.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/008.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/012.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/012.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/037.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/037.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/051.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/051.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/052.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/052.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/059.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/059.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/060.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/060.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/062.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/062.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/065.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/065.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/068.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/068.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/070.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/070.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/075.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/075.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/076.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/076.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/077.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/077.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/084.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/084.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/085.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/085.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/086.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/086.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/088.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/088.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/090.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/090.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/091.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/091.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/093.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/093.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/096.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/096.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/097.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/097.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/098.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/098.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/099.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/099.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/106.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/106.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/108.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/108.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/112.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/112.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/113.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/113.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/114.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/114.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/118.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/118.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/119.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/119.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/127.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/127.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/128.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/128.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/129.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/129.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/136.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/136.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/139.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/139.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/142.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/142.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/143.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/143.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/144.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/144.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/150.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/150.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/153.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/153.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/154.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/154.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/155.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/155.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/156.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/156.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/160.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/160.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/161.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/161.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/163.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/163.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/167.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/167.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/169.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/169.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/173.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/173.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/175.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/175.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/179.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/179.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/001.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/001.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/003.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/003.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/004.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/004.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/005.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/005.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/006.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/006.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/010.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/010.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/011.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/011.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/014.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/014.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/018.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/018.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/029.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/029.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/030.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/030.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/041.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/041.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/046.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/046.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/047.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/047.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/048.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/048.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/058.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/058.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/061.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/061.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/066.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/066.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/067.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/067.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/069.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/069.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/073.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/073.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/074.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/074.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/078.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/078.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/082.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/082.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/087.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/087.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/089.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/089.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/092.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/092.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/094.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/094.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/100.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/100.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/101.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/101.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/102.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/102.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/103.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/103.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/109.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/109.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/111.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/111.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/115.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/115.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/116.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/116.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/120.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/120.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/121.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/121.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/122.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/122.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/123.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/123.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/130.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/130.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/131.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/131.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/132.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/132.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/133.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/133.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/134.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/134.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/135.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/135.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/137.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/137.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/138.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/138.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/140.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/140.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/141.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/141.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/145.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/145.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/146.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/146.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/147.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/147.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/157.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/157.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/158.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/158.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/159.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/159.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/162.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/162.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/164.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/164.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/165.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/165.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/166.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/166.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/170.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/170.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/171.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/171.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/176.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/176.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/177.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/177.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/178.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/178.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/180.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/180.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/181.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/181.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/182.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/182.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/007.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/007.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/009.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/009.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/013.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/013.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/015.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/015.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/017.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/017.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/020.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/020.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/022.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/022.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/023.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/023.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/026.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/026.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/027.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/027.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/028.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/028.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/031.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/031.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/032.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/032.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/035.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/035.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/038.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/038.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/042.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/042.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/049.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/049.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/055.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/055.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/056.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/056.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/063.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/063.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/064.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/064.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/071.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/071.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/072.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/072.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/079.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/079.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/080.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/080.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/081.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/081.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/095.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/095.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/104.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/104.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/105.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/105.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/110.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/110.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/117.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/117.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/124.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/124.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/125.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/125.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/126.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/126.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/148.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/148.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/172.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/172.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/019.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/019.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/021.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/021.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/024.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/024.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/025.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/025.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/033.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/033.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/034.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/034.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/040.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/040.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/043.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/043.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/044.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/044.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/054.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/054.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/057.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/057.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/016.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/016.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/036.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/036.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/039.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/039.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/045.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/045.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/050.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/050.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/053.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/053.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/174.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/174.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/107.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/107.jpg);">
+                        <span class="num num-1">3</span>
+                  </div> 
+                </a>
+              </div>
+          </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
+<script type="text/javascript">
+  $(document).ready(function () {
+
+   activate_tab()
+   
+  })
+
+  function activate_tab() {
+    let cur_tab = $('.nav-tab.item')
+    cur_tab.addClass('active')
+  }
+
+
+</script>
+
+  
+
+</body>
+</html>

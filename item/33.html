@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi">
+  <meta name="renderer" content="webkit">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>FGO Items</title>
+  
+  <!-- <link rel="stylesheet" type="text/css" href="/static/css/layout.css"> -->
+  <style type="text/css">
+
+    /* Layout */
+    html, body {
+      overflow:hidden;
+      overflow-y:auto;
+      overflow-x:hidden;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    a, 
+    a:hover,
+    a:link,
+    a:active,
+    a:visited
+     {
+      text-decoration : none;
+    } 
+    
+    .flex-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+
+      margin: 50px;
+    }
+    /* Layout */
+
+
+    .heads {
+      width: 80%;
+      margin-top: 10px;
+    }
+
+    .head-img{
+      width: 97px;
+      height: 106px;
+      background-size: 97px, 106px;
+      margin: 4px 10px;
+    }
+
+    .items {
+      width: 70%;
+      margin: auto;
+      margin-top: 30px;
+    }
+
+    .item {
+
+    }
+
+    .item img{
+      width: 97px;
+      height: 106px;
+      margin: 10px;
+    }
+    
+
+    .item-back {
+      margin-left: 3%;
+      margin-top: 30px;
+    }
+
+    .num {
+      position: relative;
+      top: 60%;
+      color: white;
+      font-weight: bold;
+      -webkit-filter:
+         drop-shadow(1px 0px 0px black)
+         drop-shadow(0px 1px 0px black)
+         drop-shadow(0px -1px 0px black)
+         drop-shadow(-1px 0px 0px black);
+      filter:
+         drop-shadow(1px 0px 0px black)
+         drop-shadow(0px 1px 0px black)
+         drop-shadow(0px -1px 0px black)
+         drop-shadow(-1px 0px 0px black);
+    }
+
+    .num-1 {
+      left: 85%
+    }
+    .num-2 {
+      left: 75%;
+    }
+    .num-3 {
+      left: 65%
+    }
+
+    @media screen and (max-width:  450px) {
+      .flex-container{
+        margin: 20px 10px;
+      }
+      .heads {
+        width: 90%;
+      }
+      .head-img {
+        width: 55px;
+        height: 60px;
+        background-size: 55px, 60px;
+        background-repeat: no-repeat;
+        margin: 4px 10px;
+      }
+      .items {
+        width: 90%;
+      }
+      .item img {
+        width: 55px;
+        height: 60px;
+        margin: 4px 10px;
+      }
+      .item .back {
+        width: 60px;
+        height: 66px; 
+      }
+      .num {
+        font-size: 10px;
+      }
+      .num-1 {
+        left: 80%
+      }
+      .num-2 {
+        left: 70%;
+      }
+      .num-3 {
+        left: 60%
+      }
+
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+  <ul class="nav nav-tabs">
+    <li class="nav-tab item"><a href="../item.html">Items</a></li>
+    <li class="nav-tab servant"><a href="../servant.html">Servants</a></li>
+  </ul>
+
+  <div id="content">
+    <div class="item back">
+      <a href="../item.html">
+        <img src="http://file.fgowiki.fgowiki.com/fgo/material/guzi.jpg">
+      </a>
+    </div>
+
+    <div>
+
+        <div class="break flex-container">
+        
+          <h3 class="total">break: 4</h3>
+
+          <div class="flex-container heads">
+              <div class="flex-item head">
+                <a href="../servant/182.html">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/182.jpg);">
+                        <span class="num num-1">4</span>
+                  </div> 
+                </a>
+              </div>
+          </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
+<script type="text/javascript">
+  $(document).ready(function () {
+
+   activate_tab()
+   
+  })
+
+  function activate_tab() {
+    let cur_tab = $('.nav-tab.item')
+    cur_tab.addClass('active')
+  }
+
+
+</script>
+
+  
+
+</body>
+</html>

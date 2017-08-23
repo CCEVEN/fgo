@@ -1,0 +1,519 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi">
+  <meta name="renderer" content="webkit">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>FGO Servant</title>
+  
+  <!-- <link rel="stylesheet" type="text/css" href="/static/css/layout.css"> -->
+
+  <style type="text/css">
+    /* Layout */
+    html, body {
+      overflow:hidden;
+      overflow-y:auto;
+      overflow-x:hidden;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    a, 
+    a:hover,
+    a:link,
+    a:active,
+    a:visited
+     {
+      text-decoration : none;
+    } 
+
+    .flex-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+
+      margin: 50px;
+    }
+    /* Layout */
+
+
+    html {
+      max-width: 95vw;
+    }
+
+    .heads {
+      width: 70%;
+      margin: auto;
+      margin-top: 30px;
+    }
+    .head img{
+      width: 97px;
+      height: 106px;
+      margin: 10px 15px;
+    }
+    .word {
+      width: 10vh;
+    }
+    .level-needs {
+      list-style-type: none;
+    }
+
+    .item.thumb {
+      width: 5.0vw;   /* 50px */
+      height: 5.5vw;  /* 55px */
+      margin-top: .5vw;
+    }
+    .material-wrapper {
+      display: inline-block;
+      width: 8.5vw; /* 85px */
+      font-weight: bold;
+    }
+
+    .total > .word {
+      margin-right: 40px;
+    }
+
+    .materials, .level-need {
+      width: 40vw;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+
+    }
+
+    @media screen and (max-width:  450px) {
+      .flex-container{
+        margin: 20px 10px;
+      }
+
+      .head img{
+        width: 55px;
+        height: 60px;
+        margin: 4px 10px;
+      }
+      .heads {
+        width: 90%;
+      }
+      .materials, .level-need {
+        width: 320px;
+      }
+      .materials {
+        margin-left: 12vw;
+      }
+
+
+  }
+
+  @media screen and (max-width:  510px) {
+    .flex-container{
+      margin: 20px 10px;
+    }
+  }
+
+  @media screen and (max-width:  1000px) {
+    .item.thumb {
+      width: 50px;   /* 50px */
+      height: 55px;  /* 55px */
+    }
+    .material-wrapper {
+      display: inline-block;
+      width: 85px; /* 85px */
+      font-weight: bold;
+    }
+  }
+
+  </style>
+
+
+</head>
+<body>
+
+  <ul class="nav nav-tabs">
+    <li class="nav-tab item"><a href="../item.html">Items</a></li>
+    <li class="nav-tab servant"><a href="../servant.html">Servants</a></li>
+  </ul>
+
+  <div id="content">
+    <div class="head back">
+      <a href="../servant.html">
+        <img src="http://file.fgowiki.fgowiki.com/fgo/head/064.jpg">
+      </a>
+    </div>
+
+      <div class="break flex-container">
+
+        <h3 class="word">break: </h3>
+
+        <ul class="level-needs">
+
+            <li class="level-need">
+
+                <span class="material-wrapper">
+                  <a href="../item/22.html">
+                    <img class="item thumb" data-item-id="22">
+                  </a>
+                  <span>4</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+                <span class="material-wrapper">
+                  <a href="../item/22.html">
+                    <img class="item thumb" data-item-id="22">
+                  </a>
+                  <span>8</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../item/8.html">
+                    <img class="item thumb" data-item-id="8">
+                  </a>
+                  <span>5</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+                <span class="material-wrapper">
+                  <a href="../item/21.html">
+                    <img class="item thumb" data-item-id="21">
+                  </a>
+                  <span>4</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../item/77.html">
+                    <img class="item thumb" data-item-id="77">
+                  </a>
+                  <span>4</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../item/44.html">
+                    <img class="item thumb" data-item-id="44">
+                  </a>
+                  <span>20</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+                <span class="material-wrapper">
+                  <a href="../item/21.html">
+                    <img class="item thumb" data-item-id="21">
+                  </a>
+                  <span>8</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../item/16.html">
+                    <img class="item thumb" data-item-id="16">
+                  </a>
+                  <span>7</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../item/77.html">
+                    <img class="item thumb" data-item-id="77">
+                  </a>
+                  <span>8</span>
+                </span>
+
+            </li>
+
+        </ul>
+
+      </div>
+
+      <div class="skill flex-container">
+
+        <h3 class="word">skill: </h3>
+
+        <ul class="level-needs">
+
+            <li class="level-need">
+
+                <span class="material-wrapper">
+                  <a href="../item/62.html">
+                    <img class="item thumb" data-item-id="62">
+                  </a>
+                  <span>4</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+                <span class="material-wrapper">
+                  <a href="../item/62.html">
+                    <img class="item thumb" data-item-id="62">
+                  </a>
+                  <span>8</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+                <span class="material-wrapper">
+                  <a href="../item/51.html">
+                    <img class="item thumb" data-item-id="51">
+                  </a>
+                  <span>4</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+                <span class="material-wrapper">
+                  <a href="../item/51.html">
+                    <img class="item thumb" data-item-id="51">
+                  </a>
+                  <span>8</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../item/44.html">
+                    <img class="item thumb" data-item-id="44">
+                  </a>
+                  <span>10</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+                <span class="material-wrapper">
+                  <a href="../item/69.html">
+                    <img class="item thumb" data-item-id="69">
+                  </a>
+                  <span>4</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../item/44.html">
+                    <img class="item thumb" data-item-id="44">
+                  </a>
+                  <span>20</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+                <span class="material-wrapper">
+                  <a href="../item/69.html">
+                    <img class="item thumb" data-item-id="69">
+                  </a>
+                  <span>8</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../item/8.html">
+                    <img class="item thumb" data-item-id="8">
+                  </a>
+                  <span>4</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+                <span class="material-wrapper">
+                  <a href="../item/8.html">
+                    <img class="item thumb" data-item-id="8">
+                  </a>
+                  <span>7</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../item/9.html">
+                    <img class="item thumb" data-item-id="9">
+                  </a>
+                  <span>4</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+                <span class="material-wrapper">
+                  <a href="../item/9.html">
+                    <img class="item thumb" data-item-id="9">
+                  </a>
+                  <span>12</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../item/16.html">
+                    <img class="item thumb" data-item-id="16">
+                  </a>
+                  <span>13</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+                <span class="material-wrapper">
+                  <a href="../item/10.html">
+                    <img class="item thumb" data-item-id="10">
+                  </a>
+                  <span>1</span>
+                </span>
+
+            </li>
+
+        </ul>
+
+      </div>
+
+    <div class="total flex-container">
+    <h3 class="word">total: </h3>
+      
+      <div class="materials">
+        <span class="material-wrapper">
+          <a href="../item/16.html">
+            <img class="item thumb" data-item-id="16">
+          </a>
+          <span>46</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../item/51.html">
+            <img class="item thumb" data-item-id="51">
+          </a>
+          <span>36</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../item/21.html">
+            <img class="item thumb" data-item-id="21">
+          </a>
+          <span>12</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../item/22.html">
+            <img class="item thumb" data-item-id="22">
+          </a>
+          <span>12</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../item/8.html">
+            <img class="item thumb" data-item-id="8">
+          </a>
+          <span>38</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../item/9.html">
+            <img class="item thumb" data-item-id="9">
+          </a>
+          <span>48</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../item/10.html">
+            <img class="item thumb" data-item-id="10">
+          </a>
+          <span>3</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../item/44.html">
+            <img class="item thumb" data-item-id="44">
+          </a>
+          <span>110</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../item/77.html">
+            <img class="item thumb" data-item-id="77">
+          </a>
+          <span>12</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../item/62.html">
+            <img class="item thumb" data-item-id="62">
+          </a>
+          <span>36</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../item/69.html">
+            <img class="item thumb" data-item-id="69">
+          </a>
+          <span>36</span>
+        </span>
+      </div>
+
+    </div>
+
+    
+</div>
+
+
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      table = {"1": "badge", "2": "bakazhen", "3": "ball", "4": "bone", "5": "chain", "6": "claw", "7": "claw1", "8": "clevis", "9": "cluster", "10": "cubes", "11": "danjieshi", "12": "deng", "13": "DragonBall", "14": "duandai", "15": "fat", "16": "feather", "17": "figure1g", "18": "figure1s", "19": "figure2g", "20": "figure2s", "21": "figure3g", "22": "figure3s", "23": "figure4g", "24": "figure4s", "25": "figure5g", "26": "figure5s", "27": "figure6g", "28": "figure6s", "29": "figure7g", "30": "figure7s", "31": "gear", "32": "gem", "33": "guzi", "34": "heart", "35": "jiao", "36": "jier", "37": "Kfc", "38": "knife", "39": "lamp", "40": "lanshedai", "41": "lighter", "42": "Lollipop", "43": "paper", "44": "plate", "45": "potion", "46": "powder", "47": "qiqi", "48": "root", "49": "ruby01", "50": "ruby02", "51": "ruby03", "52": "ruby04", "53": "ruby05", "54": "ruby06", "55": "ruby07", "56": "shell", "57": "shuzhi", "58": "skull", "59": "snake", "60": "sphere01", "61": "sphere02", "62": "sphere03", "63": "sphere04", "64": "sphere05", "65": "sphere06", "66": "sphere07", "67": "star01", "68": "star02", "69": "star03", "70": "star04", "71": "star05", "72": "star06", "73": "star07", "74": "suiye", "75": "tears", "76": "tooth", "77": "walnut", "78": "xianglian", "79": "yinmao"}
+
+      /*
+
+      $.ajax({
+        url: "/static/json/mtr_id_to_name/transform.json",
+        type: "GET",
+        dataType: 'json',
+        success: function (table) {
+          callback(table)
+        }
+      })
+
+      */
+     activate_tab()
+
+     callback(table)
+
+
+    })
+
+
+    function callback(table) {
+
+      let thumbs = $('.item.thumb')
+      for (let i = 0; i < thumbs.length; i++) {
+        let thumb = $(thumbs[i])
+        let mtr_id = thumb.attr('data-item-id')
+
+        let mtr_name = table[mtr_id]
+        let url = `http://file.fgowiki.fgowiki.com/fgo/material/${mtr_name}.jpg`
+
+        thumb.attr('src', url)
+
+      }
+    }
+
+    function activate_tab() {
+      let cur_tab = $('.nav-tab.servant')
+      cur_tab.addClass('active')
+    }
+
+
+  </script>
+
+  
+
+</body>
+</html>
