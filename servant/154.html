@@ -12,7 +12,7 @@
 
   <title>FGO Servant</title>
   
-  <!-- <link rel="stylesheet" type="text/css" href="/static/css/layout.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="../static/css/layout.css"> -->
 
   <style type="text/css">
     /* Layout */
@@ -145,7 +145,7 @@
   <div id="content">
     <div class="head back">
       <a href="../servant.html">
-        <img src="http://file.fgowiki.fgowiki.com/fgo/head/154.jpg">
+        <img src="../static/images/head/154.jpg">
       </a>
     </div>
 
@@ -479,7 +479,7 @@
       /*
 
       $.ajax({
-        url: "/static/json/mtr_id_to_name/transform.json",
+        url: "../static/json/mtr_id_to_name/transform.json",
         type: "GET",
         dataType: 'json',
         success: function (table) {
@@ -504,7 +504,7 @@
         let mtr_id = thumb.attr('data-item-id')
 
         let mtr_name = table[mtr_id]
-        let url = `http://file.fgowiki.fgowiki.com/fgo/material/${mtr_name}.jpg`
+        let url = `../static/images/material/${mtr_name}.jpg`
 
         thumb.attr('src', url)
 
