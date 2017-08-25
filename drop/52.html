@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi">
+  <meta name="renderer" content="webkit">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>FGO Items</title>
+  
+  <!-- <link rel="stylesheet" type="text/css" href="../static/css/layout.css"> -->
+  <style type="text/css">
+
+    /* Layout */
+    html, body {
+      overflow:hidden;
+      overflow-y:auto;
+      overflow-x:hidden;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    a, 
+    a:hover,
+    a:link,
+    a:active,
+    a:visited
+     {
+      text-decoration : none;
+    } 
+    
+    .flex-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+
+      margin: 50px;
+    }
+    /* Layout */
+
+
+    .heads {
+      width: 80%;
+      margin-top: 10px;
+    }
+
+    .head-img{
+      width: 97px;
+      height: 106px;
+      background-size: 97px, 106px;
+      margin: 4px 10px;
+    }
+
+    .items {
+      width: 70%;
+      margin: auto;
+      margin-top: 30px;
+    }
+
+    .item {
+
+    }
+
+    .item img{
+      width: 97px;
+      height: 106px;
+      margin: 10px;
+    }
+    
+
+    .item-back {
+      margin-left: 3%;
+      margin-top: 30px;
+    }
+
+    .num {
+      position: relative;
+      top: 60%;
+      color: white;
+      font-weight: bold;
+      -webkit-filter:
+         drop-shadow(1px 0px 0px black)
+         drop-shadow(0px 1px 0px black)
+         drop-shadow(0px -1px 0px black)
+         drop-shadow(-1px 0px 0px black);
+      filter:
+         drop-shadow(1px 0px 0px black)
+         drop-shadow(0px 1px 0px black)
+         drop-shadow(0px -1px 0px black)
+         drop-shadow(-1px 0px 0px black);
+    }
+
+    .num-1 {
+      left: 85%
+    }
+    .num-2 {
+      left: 75%;
+    }
+    .num-3 {
+      left: 65%
+    }
+
+    @media screen and (max-width:  450px) {
+      .flex-container{
+        margin: 20px 10px;
+      }
+      .heads {
+        width: 90%;
+      }
+      .head-img {
+        width: 55px;
+        height: 60px;
+        background-size: 55px, 60px;
+        background-repeat: no-repeat;
+        margin: 4px 10px;
+      }
+      .items {
+        width: 90%;
+      }
+      .item img {
+        width: 55px;
+        height: 60px;
+        margin: 4px 10px;
+      }
+      .item .back {
+        width: 60px;
+        height: 66px; 
+      }
+      .num {
+        font-size: 10px;
+      }
+      .num-1 {
+        left: 80%
+      }
+      .num-2 {
+        left: 70%;
+      }
+      .num-3 {
+        left: 60%
+      }
+
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+  <ul class="nav nav-tabs">
+    <li class="nav-tab item"><a href="../item.html">Items</a></li>
+    <li class="nav-tab servant"><a href="../servant.html">Servants</a></li>
+    <li class="nav-tab drop"><a href="../drop.html">Drops</a></li>
+  </ul>
+
+  <div id="content">
+    <div class="item back">
+      <a href="../drop.html">
+        <img src="../static/images/material/ruby04.jpg">
+      </a>
+    </div>
+
+    <table class="table table-striped">
+      <tr>
+        <th>Item</th>
+        <th>Area</th>
+        <th>Quest</th>
+        <th>AP</th>
+        <th>AP_per_Drop</th>
+        <th>Drop_Chance</th>
+        <th>Sample</th>
+      </tr>
+
+      <tr>
+        <td>术之魔石  </td>
+        <td>迦勒底之门 (周五)       </td>
+        <td>术之修炼场 30AP      </td>
+        <td>30         </td>
+        <td>17.4</td>
+        <td>172.5%</td>
+        <td>1097     </td>
+      </tr>
+
+      <tr>
+        <td>术之魔石  </td>
+        <td>迦勒底之门 (周五)       </td>
+        <td>术之修炼场 20AP      </td>
+        <td>20         </td>
+        <td>25.5</td>
+        <td>78.4%</td>
+        <td>693     </td>
+      </tr>
+
+      <tr>
+        <td>术之魔石  </td>
+        <td>卡美洛       </td>
+        <td>明けの砂丘      </td>
+        <td>19         </td>
+        <td>42.9</td>
+        <td>44.3%</td>
+        <td>235     </td>
+      </tr>
+
+      <tr>
+        <td>术之魔石  </td>
+        <td>阿加森       </td>
+        <td>大地の裂け目      </td>
+        <td>21         </td>
+        <td>43.0</td>
+        <td>48.9%</td>
+        <td>189     </td>
+      </tr>
+
+      <tr>
+        <td>术之魔石  </td>
+        <td>迦勒底之门 (周五)       </td>
+        <td>术之修炼场 40AP      </td>
+        <td>40         </td>
+        <td>44.2</td>
+        <td>90.4%</td>
+        <td>8827     </td>
+      </tr>
+
+    </table>
+
+
+</div>
+
+
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
+<script type="text/javascript">
+  $(document).ready(function () {
+
+   activate_tab()
+   
+  })
+
+  function activate_tab() {
+    let cur_tab = $('.nav-tab.drop')
+    cur_tab.addClass('active')
+  }
+
+
+</script>
+
+  
+
+</body>
+</html>
