@@ -13,14 +13,14 @@
     <script src="?__debugger__=yes&amp;cmd=resource&amp;f=jquery.js"></script>
     <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
     <script type="text/javascript">
-      var TRACEBACK = 2045809341328,
+      var TRACEBACK = 1993322368976,
           CONSOLE_MODE = false,
           EVALEX = true,
           EVALEX_TRUSTED = false,
-          SECRET = "U3lrlFRMj2FhWkJUPJxb";
+          SECRET = "ZlUjzBvgdu2fZzswvqJt";
     </script>
   </head>
-  <body>
+  <body style="background-color: #fff">
     <div class="debugger">
 <h1>jinja2.exceptions.UndefinedError</h1>
 <div class="detail">
@@ -29,9 +29,9 @@
 <h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
 <div class="traceback">
   
-  <ul><li><div class="frame" id="frame-2045809341272">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">2000</em>,
+  <ul><li><div class="frame" id="frame-1993322386432">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py"</cite>,
+      line <em class="line">1997</em>,
       in <code class="function">__call__</code></h4>
   <div class="source"><pre class="line before"><span class="ws">                </span>error = None</pre>
 <pre class="line before"><span class="ws">            </span>ctx.auto_pop(error)</pre>
@@ -46,26 +46,26 @@
 <pre class="line after"><span class="ws">            </span>self.name,</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809341216">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">1991</em>,
+<li><div class="frame" id="frame-1993322386376">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py"</cite>,
+      line <em class="line">1985</em>,
       in <code class="function">wsgi_app</code></h4>
   <div class="source"><pre class="line before"><span class="ws">        </span>try:</pre>
 <pre class="line before"><span class="ws">            </span>try:</pre>
 <pre class="line before"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
 <pre class="line before"><span class="ws">            </span>except Exception as e:</pre>
 <pre class="line before"><span class="ws">                </span>error = e</pre>
-<pre class="line current"><span class="ws">                </span>response = self.make_response(self.handle_exception(e))</pre>
+<pre class="line current"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+<pre class="line after"><span class="ws">            </span>except:</pre>
+<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre>
+<pre class="line after"><span class="ws">                </span>raise</pre>
 <pre class="line after"><span class="ws">            </span>return response(environ, start_response)</pre>
-<pre class="line after"><span class="ws">        </span>finally:</pre>
-<pre class="line after"><span class="ws">            </span>if self.should_ignore_error(error):</pre>
-<pre class="line after"><span class="ws">                </span>error = None</pre>
-<pre class="line after"><span class="ws">            </span>ctx.auto_pop(error)</pre></div>
+<pre class="line after"><span class="ws">        </span>finally:</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809341104">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">1567</em>,
+<li><div class="frame" id="frame-1993322385536">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py"</cite>,
+      line <em class="line">1540</em>,
       in <code class="function">handle_exception</code></h4>
   <div class="source"><pre class="line before"><span class="ws">            </span># if we want to repropagate the exception, we can attempt to</pre>
 <pre class="line before"><span class="ws">            </span># raise it with the whole traceback in case we can do that</pre>
@@ -80,8 +80,8 @@
 <pre class="line after"><span class="ws">        </span>if handler is None:</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809341440">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\_compat.py"</cite>,
+<li><div class="frame" id="frame-1993322386264">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\_compat.py"</cite>,
       line <em class="line">33</em>,
       in <code class="function">reraise</code></h4>
   <div class="source"><pre class="line before"><span class="ws">    </span>from io import StringIO</pre>
@@ -97,9 +97,9 @@
 <pre class="line after"><span class="ws">    </span>text_type = unicode</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809341888">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">1988</em>,
+<li><div class="frame" id="frame-1993322385760">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py"</cite>,
+      line <em class="line">1982</em>,
       in <code class="function">wsgi_app</code></h4>
   <div class="source"><pre class="line before"><span class="ws">        </span>ctx = self.request_context(environ)</pre>
 <pre class="line before"><span class="ws">        </span>ctx.push()</pre>
@@ -109,14 +109,14 @@
 <pre class="line current"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
 <pre class="line after"><span class="ws">            </span>except Exception as e:</pre>
 <pre class="line after"><span class="ws">                </span>error = e</pre>
-<pre class="line after"><span class="ws">                </span>response = self.make_response(self.handle_exception(e))</pre>
-<pre class="line after"><span class="ws">            </span>return response(environ, start_response)</pre>
-<pre class="line after"><span class="ws">        </span>finally:</pre></div>
+<pre class="line after"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+<pre class="line after"><span class="ws">            </span>except:</pre>
+<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809341832">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">1641</em>,
+<li><div class="frame" id="frame-1993322385704">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py"</cite>,
+      line <em class="line">1614</em>,
       in <code class="function">full_dispatch_request</code></h4>
   <div class="source"><pre class="line before"><span class="ws">            </span>request_started.send(self)</pre>
 <pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
@@ -124,16 +124,16 @@
 <pre class="line before"><span class="ws">                </span>rv = self.dispatch_request()</pre>
 <pre class="line before"><span class="ws">        </span>except Exception as e:</pre>
 <pre class="line current"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
-<pre class="line after"><span class="ws">        </span>response = self.make_response(rv)</pre>
-<pre class="line after"><span class="ws">        </span>response = self.process_response(response)</pre>
-<pre class="line after"><span class="ws">        </span>request_finished.send(self, response=response)</pre>
-<pre class="line after"><span class="ws">        </span>return response</pre>
-<pre class="line after"><span class="ws"></span> </pre></div>
+<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_request(self, rv, from_error_handler=False):</pre>
+<pre class="line after"><span class="ws">        </span>&quot;&quot;&quot;Given the return value from a view function this finalizes</pre>
+<pre class="line after"><span class="ws">        </span>the request by converting it into a response and invoking the</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809341720">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">1544</em>,
+<li><div class="frame" id="frame-1993322385872">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py"</cite>,
+      line <em class="line">1517</em>,
       in <code class="function">handle_user_exception</code></h4>
   <div class="source"><pre class="line before"><span class="ws">            </span>return self.handle_http_exception(e)</pre>
 <pre class="line before"><span class="ws"></span> </pre>
@@ -148,8 +148,8 @@
 <pre class="line after"><span class="ws">        </span>occurs that is not caught.  In debug mode the exception will</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809341944">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\_compat.py"</cite>,
+<li><div class="frame" id="frame-1993322385928">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\_compat.py"</cite>,
       line <em class="line">33</em>,
       in <code class="function">reraise</code></h4>
   <div class="source"><pre class="line before"><span class="ws">    </span>from io import StringIO</pre>
@@ -165,9 +165,9 @@
 <pre class="line after"><span class="ws">    </span>text_type = unicode</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809341664">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">1639</em>,
+<li><div class="frame" id="frame-1993322385648">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py"</cite>,
+      line <em class="line">1612</em>,
       in <code class="function">full_dispatch_request</code></h4>
   <div class="source"><pre class="line before"><span class="ws">        </span>self.try_trigger_before_first_request_functions()</pre>
 <pre class="line before"><span class="ws">        </span>try:</pre>
@@ -177,14 +177,14 @@
 <pre class="line current"><span class="ws">                </span>rv = self.dispatch_request()</pre>
 <pre class="line after"><span class="ws">        </span>except Exception as e:</pre>
 <pre class="line after"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
-<pre class="line after"><span class="ws">        </span>response = self.make_response(rv)</pre>
-<pre class="line after"><span class="ws">        </span>response = self.process_response(response)</pre>
-<pre class="line after"><span class="ws">        </span>request_finished.send(self, response=response)</pre></div>
+<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_request(self, rv, from_error_handler=False):</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809342056">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">1625</em>,
+<li><div class="frame" id="frame-1993322386040">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py"</cite>,
+      line <em class="line">1598</em>,
       in <code class="function">dispatch_request</code></h4>
   <div class="source"><pre class="line before"><span class="ws">        </span># request came with the OPTIONS method, reply automatically</pre>
 <pre class="line before"><span class="ws">        </span>if getattr(rule, 'provide_automatic_options', False) \</pre>
@@ -199,7 +199,7 @@
 <pre class="line after"><span class="ws">        </span>error handling.</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809342112">
+<li><div class="frame" id="frame-1993322386096">
   <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\8.25\fgotool\application.py"</cite>,
       line <em class="line">59</em>,
       in <code class="function">drop</code></h4>
@@ -216,8 +216,8 @@
 <pre class="line after"><span class="ws">    </span>mtr_list = json.loads(f.read())</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809342168">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\templating.py"</cite>,
+<li><div class="frame" id="frame-1993322386152">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\templating.py"</cite>,
       line <em class="line">134</em>,
       in <code class="function">render_template</code></h4>
   <div class="source"><pre class="line before"><span class="ws">                    </span>context of the template.</pre>
@@ -233,8 +233,8 @@
 <pre class="line after"><span class="ws">    </span>with the given context. Template variables will be autoescaped.</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809342000">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\templating.py"</cite>,
+<li><div class="frame" id="frame-1993322385984">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\templating.py"</cite>,
       line <em class="line">116</em>,
       in <code class="function">_render</code></h4>
   <div class="source"><pre class="line before"><span class="ws"></span> </pre>
@@ -250,9 +250,9 @@
 <pre class="line after"><span class="ws"></span>def render_template(template_name_or_list, **context):</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809342728">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\jinja2\environment.py"</cite>,
-      line <em class="line">989</em>,
+<li><div class="frame" id="frame-1993322386488">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\jinja2\environment.py"</cite>,
+      line <em class="line">1008</em>,
       in <code class="function">render</code></h4>
   <div class="source"><pre class="line before"><span class="ws">        </span>vars = dict(*args, **kwargs)</pre>
 <pre class="line before"><span class="ws">        </span>try:</pre>
@@ -261,15 +261,15 @@
 <pre class="line before"><span class="ws">            </span>exc_info = sys.exc_info()</pre>
 <pre class="line current"><span class="ws">        </span>return self.environment.handle_exception(exc_info, True)</pre>
 <pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">    </span>def stream(self, *args, **kwargs):</pre>
-<pre class="line after"><span class="ws">        </span>&quot;&quot;&quot;Works exactly like :meth:`generate` but returns a</pre>
-<pre class="line after"><span class="ws">        </span>:class:`TemplateStream`.</pre>
-<pre class="line after"><span class="ws">        </span>&quot;&quot;&quot;</pre></div>
+<pre class="line after"><span class="ws">    </span>def render_async(self, *args, **kwargs):</pre>
+<pre class="line after"><span class="ws">        </span>&quot;&quot;&quot;This works similar to :meth:`render` but returns a coroutine</pre>
+<pre class="line after"><span class="ws">        </span>that when awaited returns the entire rendered template string.  This</pre>
+<pre class="line after"><span class="ws">        </span>requires the async feature to be enabled.</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809342784">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\jinja2\environment.py"</cite>,
-      line <em class="line">754</em>,
+<li><div class="frame" id="frame-1993322386712">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\jinja2\environment.py"</cite>,
+      line <em class="line">780</em>,
       in <code class="function">handle_exception</code></h4>
   <div class="source"><pre class="line before"><span class="ws">        </span>if rendered and self.exception_formatter is not None:</pre>
 <pre class="line before"><span class="ws">            </span>return self.exception_formatter(traceback)</pre>
@@ -284,8 +284,8 @@
 <pre class="line after"><span class="ws">        </span>parameter unchanged, but if the paths should be relative to the</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809341384">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\jinja2\_compat.py"</cite>,
+<li><div class="frame" id="frame-1993322386320">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\jinja2\_compat.py"</cite>,
       line <em class="line">37</em>,
       in <code class="function">reraise</code></h4>
   <div class="source"><pre class="line before"><span class="ws">    </span>from io import BytesIO, StringIO</pre>
@@ -301,7 +301,7 @@
 <pre class="line after"><span class="ws">    </span>izip = zip</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809342504">
+<li><div class="frame" id="frame-1993322386208">
   <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\8.25\fgotool\templates\drop.html"</cite>,
       line <em class="line">1</em>,
       in <code class="function">top-level template code</code></h4>
@@ -313,7 +313,7 @@
 <pre class="line after"><span class="ws"></span>&lt;script type=&quot;text/javascript&quot;&gt;</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809341160">
+<li><div class="frame" id="frame-1993322385592">
   <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\8.25\fgotool\templates\base.html"</cite>,
       line <em class="line">23</em>,
       in <code class="function">top-level template code</code></h4>
@@ -330,7 +330,7 @@
 <pre class="line after"><span class="ws"></span> </pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809341496">
+<li><div class="frame" id="frame-1993322385480">
   <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\8.25\fgotool\templates\drop.html"</cite>,
       line <em class="line">162</em>,
       in <code class="function">block &quot;content&quot;</code></h4>
@@ -343,13 +343,13 @@
 <pre class="line after"><span class="ws"></span> </pre>
 <pre class="line after"><span class="ws"></span> </pre>
 <pre class="line after"><span class="ws">    </span>&lt;div class=&quot;item back&quot;&gt;</pre>
-<pre class="line after"><span class="ws">      </span>&lt;a href=&quot;../drop.html&quot;&gt;</pre>
+<pre class="line after"><span class="ws">      </span>&lt;a href=&quot;../item.html{{ item_id }}&quot;&gt;</pre>
 <pre class="line after"><span class="ws">        </span>&lt;img src=&quot;{{ url_for('static', filename='images/material/'+item_name+'.jpg') }}&quot;&gt;</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2045809342616">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\jinja2\environment.py"</cite>,
-      line <em class="line">389</em>,
+<li><div class="frame" id="frame-1993322386600">
+  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\venv\lib\site-packages\jinja2\environment.py"</cite>,
+      line <em class="line">411</em>,
       in <code class="function">getitem</code></h4>
   <div class="source"><pre class="line before"><span class="ws">                           </span>key=lambda x: x.priority))</pre>
 <pre class="line before"><span class="ws"></span> </pre>
@@ -357,7 +357,7 @@
 <pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;Get an item or attribute of an object but prefer the item.&quot;&quot;&quot;</pre>
 <pre class="line before"><span class="ws">        </span>try:</pre>
 <pre class="line current"><span class="ws">            </span>return obj[argument]</pre>
-<pre class="line after"><span class="ws">        </span>except (TypeError, LookupError):</pre>
+<pre class="line after"><span class="ws">        </span>except (AttributeError, TypeError, LookupError):</pre>
 <pre class="line after"><span class="ws">            </span>if isinstance(argument, string_types):</pre>
 <pre class="line after"><span class="ws">                </span>try:</pre>
 <pre class="line after"><span class="ws">                    </span>attr = str(argument)</pre>
@@ -377,37 +377,37 @@
       <input type="submit" value="create paste"></span>
     </p>
     <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 2000, in __call__
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py&quot;, line 1997, in __call__
     return self.wsgi_app(environ, start_response)
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 1991, in wsgi_app
-    response = self.make_response(self.handle_exception(e))
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 1567, in handle_exception
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py&quot;, line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py&quot;, line 1540, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\_compat.py&quot;, line 33, in reraise
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\_compat.py&quot;, line 33, in reraise
     raise value
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 1988, in wsgi_app
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py&quot;, line 1982, in wsgi_app
     response = self.full_dispatch_request()
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 1641, in full_dispatch_request
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py&quot;, line 1614, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 1544, in handle_user_exception
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py&quot;, line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\_compat.py&quot;, line 33, in reraise
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\_compat.py&quot;, line 33, in reraise
     raise value
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 1639, in full_dispatch_request
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py&quot;, line 1612, in full_dispatch_request
     rv = self.dispatch_request()
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 1625, in dispatch_request
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py&quot;, line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
   File &quot;C:\Users\admin\Desktop\backup\8.25\fgotool\application.py&quot;, line 59, in drop
     return render_template('drop.html', item_id=item_id, drops=drops, cur_tab=cur_tab)
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\templating.py&quot;, line 134, in render_template
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\templating.py&quot;, line 134, in render_template
     context, ctx.app)
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\templating.py&quot;, line 116, in _render
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\templating.py&quot;, line 116, in _render
     rv = template.render(context)
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\jinja2\environment.py&quot;, line 989, in render
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\jinja2\environment.py&quot;, line 1008, in render
     return self.environment.handle_exception(exc_info, True)
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\jinja2\environment.py&quot;, line 754, in handle_exception
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\jinja2\environment.py&quot;, line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\jinja2\_compat.py&quot;, line 37, in reraise
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\jinja2\_compat.py&quot;, line 37, in reraise
     raise value.with_traceback(tb)
   File &quot;C:\Users\admin\Desktop\backup\8.25\fgotool\templates\drop.html&quot;, line 1, in top-level template code
     {% extends &quot;base.html&quot; %}
@@ -415,7 +415,7 @@
     &lt;div id=&quot;content&quot;&gt;{% block content %}{% endblock %}&lt;/div&gt;
   File &quot;C:\Users\admin\Desktop\backup\8.25\fgotool\templates\drop.html&quot;, line 162, in block &quot;content&quot;
     #set item_name = drops[0][0]
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\jinja2\environment.py&quot;, line 389, in getitem
+  File &quot;C:\Users\admin\Desktop\backup\venv\lib\site-packages\jinja2\environment.py&quot;, line 411, in getitem
     return obj[argument]
 jinja2.exceptions.UndefinedError: list object has no element 0</textarea>
   </form>
@@ -453,37 +453,37 @@ jinja2.exceptions.UndefinedError: list object has no element 0</textarea>
 <!--
 
 Traceback (most recent call last):
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 2000, in __call__
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py", line 1997, in __call__
     return self.wsgi_app(environ, start_response)
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 1991, in wsgi_app
-    response = self.make_response(self.handle_exception(e))
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 1567, in handle_exception
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py", line 1540, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\_compat.py", line 33, in reraise
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
     raise value
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 1988, in wsgi_app
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 1641, in full_dispatch_request
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 1544, in handle_user_exception
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\_compat.py", line 33, in reraise
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
     raise value
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 1639, in full_dispatch_request
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
     rv = self.dispatch_request()
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 1625, in dispatch_request
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
   File "C:\Users\admin\Desktop\backup\8.25\fgotool\application.py", line 59, in drop
     return render_template('drop.html', item_id=item_id, drops=drops, cur_tab=cur_tab)
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\templating.py", line 134, in render_template
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\templating.py", line 134, in render_template
     context, ctx.app)
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\templating.py", line 116, in _render
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\flask\templating.py", line 116, in _render
     rv = template.render(context)
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\jinja2\environment.py", line 989, in render
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
     return self.environment.handle_exception(exc_info, True)
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\jinja2\environment.py", line 754, in handle_exception
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
   File "C:\Users\admin\Desktop\backup\8.25\fgotool\templates\drop.html", line 1, in top-level template code
     {% extends "base.html" %}
@@ -491,7 +491,7 @@ Traceback (most recent call last):
     <div id="content">{% block content %}{% endblock %}</div>
   File "C:\Users\admin\Desktop\backup\8.25\fgotool\templates\drop.html", line 162, in block "content"
     #set item_name = drops[0][0]
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\jinja2\environment.py", line 389, in getitem
+  File "C:\Users\admin\Desktop\backup\venv\lib\site-packages\jinja2\environment.py", line 411, in getitem
     return obj[argument]
 jinja2.exceptions.UndefinedError: list object has no element 0
 
