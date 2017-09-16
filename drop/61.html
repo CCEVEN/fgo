@@ -70,9 +70,8 @@
     }
     
 
-    .item-back {
-      margin-left: 3%;
-      margin-top: 30px;
+    .item.back {
+
     }
 
     .num {
@@ -102,6 +101,11 @@
       left: 65%
     }
 
+    .table {
+      margin-left: 10px;
+      width: 85%;
+    }
+
     @media screen and (max-width:  450px) {
       .flex-container{
         margin: 20px 10px;
@@ -124,9 +128,8 @@
         height: 60px;
         margin: 4px 10px;
       }
-      .item .back {
-        width: 60px;
-        height: 66px; 
+      .item.back {
+
       }
       .num {
         font-size: 10px;
@@ -140,6 +143,20 @@
       .num-3 {
         left: 60%
       }
+
+      .table {
+        margin-left: 0;
+      }
+
+      .mobile-hidden {
+        display: none;
+      }
+  
+    .table {
+      margin-left: 0;
+      width: 100%;
+    }
+
 
     }
 
@@ -166,55 +183,55 @@
       <tr>
         <th>Area</th>
         <th>Quest</th>
-        <th>AP</th>
         <th>AP per Drop</th>
-        <th>Drop Chance</th>
-        <th>Sample</th>
+        <th class="mobile-hidden">AP</th>
+        <th class="mobile-hidden">Drop Chance</th>
+        <th class="mobile-hidden">Sample</th>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周一)       </td>
-        <td>弓之修炼场 10AP      </td>
-        <td>10         </td>
-        <td>7.4</td>
-        <td>134.5%</td>
-        <td>1006     </td>
+        <td>                      迦勒底之门 (周一)       </td>
+        <td>                      弓之修炼场 10AP      </td>
+        <td>                      7.4</td>
+        <td class="mobile-hidden">10         </td>
+        <td class="mobile-hidden">134.5%</td>
+        <td class="mobile-hidden">1006     </td>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周一)       </td>
-        <td>弓之修炼场 20AP      </td>
-        <td>20         </td>
-        <td>14.7</td>
-        <td>136.3%</td>
-        <td>421     </td>
+        <td>                      迦勒底之门 (周一)       </td>
+        <td>                      弓之修炼场 20AP      </td>
+        <td>                      14.7</td>
+        <td class="mobile-hidden">20         </td>
+        <td class="mobile-hidden">136.3%</td>
+        <td class="mobile-hidden">421     </td>
       </tr>
 
       <tr>
-        <td>东木       </td>
-        <td>X-D      </td>
-        <td>5         </td>
-        <td>24.9</td>
-        <td>20.1%</td>
-        <td>1806     </td>
+        <td>                      东木       </td>
+        <td>                      X-D      </td>
+        <td>                      24.9</td>
+        <td class="mobile-hidden">5         </td>
+        <td class="mobile-hidden">20.1%</td>
+        <td class="mobile-hidden">1806     </td>
       </tr>
 
       <tr>
-        <td>东木       </td>
-        <td>X-F      </td>
-        <td>6         </td>
-        <td>35.4</td>
-        <td>16.9%</td>
-        <td>254     </td>
+        <td>                      东木       </td>
+        <td>                      X-F      </td>
+        <td>                      35.4</td>
+        <td class="mobile-hidden">6         </td>
+        <td class="mobile-hidden">16.9%</td>
+        <td class="mobile-hidden">254     </td>
       </tr>
 
       <tr>
-        <td>七丘之城       </td>
-        <td>佛罗伦萨      </td>
-        <td>9         </td>
-        <td>40.5</td>
-        <td>22.2%</td>
-        <td>207     </td>
+        <td>                      七丘之城       </td>
+        <td>                      佛罗伦萨      </td>
+        <td>                      40.5</td>
+        <td class="mobile-hidden">9         </td>
+        <td class="mobile-hidden">22.2%</td>
+        <td class="mobile-hidden">207     </td>
       </tr>
 
     </table>

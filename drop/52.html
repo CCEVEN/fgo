@@ -70,9 +70,8 @@
     }
     
 
-    .item-back {
-      margin-left: 3%;
-      margin-top: 30px;
+    .item.back {
+
     }
 
     .num {
@@ -102,6 +101,11 @@
       left: 65%
     }
 
+    .table {
+      margin-left: 10px;
+      width: 85%;
+    }
+
     @media screen and (max-width:  450px) {
       .flex-container{
         margin: 20px 10px;
@@ -124,9 +128,8 @@
         height: 60px;
         margin: 4px 10px;
       }
-      .item .back {
-        width: 60px;
-        height: 66px; 
+      .item.back {
+
       }
       .num {
         font-size: 10px;
@@ -140,6 +143,20 @@
       .num-3 {
         left: 60%
       }
+
+      .table {
+        margin-left: 0;
+      }
+
+      .mobile-hidden {
+        display: none;
+      }
+  
+    .table {
+      margin-left: 0;
+      width: 100%;
+    }
+
 
     }
 
@@ -166,55 +183,55 @@
       <tr>
         <th>Area</th>
         <th>Quest</th>
-        <th>AP</th>
         <th>AP per Drop</th>
-        <th>Drop Chance</th>
-        <th>Sample</th>
+        <th class="mobile-hidden">AP</th>
+        <th class="mobile-hidden">Drop Chance</th>
+        <th class="mobile-hidden">Sample</th>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周五)       </td>
-        <td>术之修炼场 30AP      </td>
-        <td>30         </td>
-        <td>17.4</td>
-        <td>172.5%</td>
-        <td>1097     </td>
+        <td>                      迦勒底之门 (周五)       </td>
+        <td>                      术之修炼场 30AP      </td>
+        <td>                      17.4</td>
+        <td class="mobile-hidden">30         </td>
+        <td class="mobile-hidden">172.5%</td>
+        <td class="mobile-hidden">1097     </td>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周五)       </td>
-        <td>术之修炼场 20AP      </td>
-        <td>20         </td>
-        <td>25.5</td>
-        <td>78.4%</td>
-        <td>693     </td>
+        <td>                      迦勒底之门 (周五)       </td>
+        <td>                      术之修炼场 20AP      </td>
+        <td>                      25.5</td>
+        <td class="mobile-hidden">20         </td>
+        <td class="mobile-hidden">78.4%</td>
+        <td class="mobile-hidden">693     </td>
       </tr>
 
       <tr>
-        <td>卡美洛       </td>
-        <td>黎明的沙丘      </td>
-        <td>19         </td>
-        <td>42.9</td>
-        <td>44.3%</td>
-        <td>235     </td>
+        <td>                      卡美洛       </td>
+        <td>                      黎明的沙丘      </td>
+        <td>                      42.9</td>
+        <td class="mobile-hidden">19         </td>
+        <td class="mobile-hidden">44.3%</td>
+        <td class="mobile-hidden">235     </td>
       </tr>
 
       <tr>
-        <td>阿加森       </td>
-        <td>大地の裂け目      </td>
-        <td>21         </td>
-        <td>43.0</td>
-        <td>48.9%</td>
-        <td>189     </td>
+        <td>                      阿加森       </td>
+        <td>                      大地の裂け目      </td>
+        <td>                      43.0</td>
+        <td class="mobile-hidden">21         </td>
+        <td class="mobile-hidden">48.9%</td>
+        <td class="mobile-hidden">189     </td>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周五)       </td>
-        <td>术之修炼场 40AP      </td>
-        <td>40         </td>
-        <td>44.2</td>
-        <td>90.4%</td>
-        <td>8827     </td>
+        <td>                      迦勒底之门 (周五)       </td>
+        <td>                      术之修炼场 40AP      </td>
+        <td>                      44.2</td>
+        <td class="mobile-hidden">40         </td>
+        <td class="mobile-hidden">90.4%</td>
+        <td class="mobile-hidden">8827     </td>
       </tr>
 
     </table>

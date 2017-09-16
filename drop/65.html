@@ -70,9 +70,8 @@
     }
     
 
-    .item-back {
-      margin-left: 3%;
-      margin-top: 30px;
+    .item.back {
+
     }
 
     .num {
@@ -102,6 +101,11 @@
       left: 65%
     }
 
+    .table {
+      margin-left: 10px;
+      width: 85%;
+    }
+
     @media screen and (max-width:  450px) {
       .flex-container{
         margin: 20px 10px;
@@ -124,9 +128,8 @@
         height: 60px;
         margin: 4px 10px;
       }
-      .item .back {
-        width: 60px;
-        height: 66px; 
+      .item.back {
+
       }
       .num {
         font-size: 10px;
@@ -140,6 +143,20 @@
       .num-3 {
         left: 60%
       }
+
+      .table {
+        margin-left: 0;
+      }
+
+      .mobile-hidden {
+        display: none;
+      }
+  
+    .table {
+      margin-left: 0;
+      width: 100%;
+    }
+
 
     }
 
@@ -166,55 +183,55 @@
       <tr>
         <th>Area</th>
         <th>Quest</th>
-        <th>AP</th>
         <th>AP per Drop</th>
-        <th>Drop Chance</th>
-        <th>Sample</th>
+        <th class="mobile-hidden">AP</th>
+        <th class="mobile-hidden">Drop Chance</th>
+        <th class="mobile-hidden">Sample</th>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周三)       </td>
-        <td>狂之修炼场 10AP      </td>
-        <td>10         </td>
-        <td>7.6</td>
-        <td>131.5%</td>
-        <td>747     </td>
+        <td>                      迦勒底之门 (周三)       </td>
+        <td>                      狂之修炼场 10AP      </td>
+        <td>                      7.6</td>
+        <td class="mobile-hidden">10         </td>
+        <td class="mobile-hidden">131.5%</td>
+        <td class="mobile-hidden">747     </td>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周三)       </td>
-        <td>狂之修炼场 20AP      </td>
-        <td>20         </td>
-        <td>16.2</td>
-        <td>123.1%</td>
-        <td>484     </td>
+        <td>                      迦勒底之门 (周三)       </td>
+        <td>                      狂之修炼场 20AP      </td>
+        <td>                      16.2</td>
+        <td class="mobile-hidden">20         </td>
+        <td class="mobile-hidden">123.1%</td>
+        <td class="mobile-hidden">484     </td>
       </tr>
 
       <tr>
-        <td>七丘之城       </td>
-        <td>高卢      </td>
-        <td>9         </td>
-        <td>61.0</td>
-        <td>14.8%</td>
-        <td>576     </td>
+        <td>                      七丘之城       </td>
+        <td>                      高卢      </td>
+        <td>                      61.0</td>
+        <td class="mobile-hidden">9         </td>
+        <td class="mobile-hidden">14.8%</td>
+        <td class="mobile-hidden">576     </td>
       </tr>
 
       <tr>
-        <td>阿加森       </td>
-        <td>桃源郷      </td>
-        <td>21         </td>
-        <td>64.4</td>
-        <td>32.6%</td>
-        <td>373     </td>
+        <td>                      阿加森       </td>
+        <td>                      桃源郷      </td>
+        <td>                      64.4</td>
+        <td class="mobile-hidden">21         </td>
+        <td class="mobile-hidden">32.6%</td>
+        <td class="mobile-hidden">373     </td>
       </tr>
 
       <tr>
-        <td>俄刻阿诺斯       </td>
-        <td>潮眼之海      </td>
-        <td>14         </td>
-        <td>77.5</td>
-        <td>18.1%</td>
-        <td>919     </td>
+        <td>                      俄刻阿诺斯       </td>
+        <td>                      潮眼之海      </td>
+        <td>                      77.5</td>
+        <td class="mobile-hidden">14         </td>
+        <td class="mobile-hidden">18.1%</td>
+        <td class="mobile-hidden">919     </td>
       </tr>
 
     </table>

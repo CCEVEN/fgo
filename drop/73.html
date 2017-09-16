@@ -70,9 +70,8 @@
     }
     
 
-    .item-back {
-      margin-left: 3%;
-      margin-top: 30px;
+    .item.back {
+
     }
 
     .num {
@@ -102,6 +101,11 @@
       left: 65%
     }
 
+    .table {
+      margin-left: 10px;
+      width: 85%;
+    }
+
     @media screen and (max-width:  450px) {
       .flex-container{
         margin: 20px 10px;
@@ -124,9 +128,8 @@
         height: 60px;
         margin: 4px 10px;
       }
-      .item .back {
-        width: 60px;
-        height: 66px; 
+      .item.back {
+
       }
       .num {
         font-size: 10px;
@@ -140,6 +143,20 @@
       .num-3 {
         left: 60%
       }
+
+      .table {
+        margin-left: 0;
+      }
+
+      .mobile-hidden {
+        display: none;
+      }
+  
+    .table {
+      margin-left: 0;
+      width: 100%;
+    }
+
 
     }
 
@@ -166,37 +183,37 @@
       <tr>
         <th>Area</th>
         <th>Quest</th>
-        <th>AP</th>
         <th>AP per Drop</th>
-        <th>Drop Chance</th>
-        <th>Sample</th>
+        <th class="mobile-hidden">AP</th>
+        <th class="mobile-hidden">Drop Chance</th>
+        <th class="mobile-hidden">Sample</th>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周六)       </td>
-        <td>杀之修炼场 40AP      </td>
-        <td>40         </td>
-        <td>154.3</td>
-        <td>25.9%</td>
-        <td>5075     </td>
+        <td>                      迦勒底之门 (周六)       </td>
+        <td>                      杀之修炼场 40AP      </td>
+        <td>                      154.3</td>
+        <td class="mobile-hidden">40         </td>
+        <td class="mobile-hidden">25.9%</td>
+        <td class="mobile-hidden">5075     </td>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周六)       </td>
-        <td>杀之修炼场 30AP      </td>
-        <td>30         </td>
-        <td>200.5</td>
-        <td>15.0%</td>
-        <td>655     </td>
+        <td>                      迦勒底之门 (周六)       </td>
+        <td>                      杀之修炼场 30AP      </td>
+        <td>                      200.5</td>
+        <td class="mobile-hidden">30         </td>
+        <td class="mobile-hidden">15.0%</td>
+        <td class="mobile-hidden">655     </td>
       </tr>
 
       <tr>
-        <td>伦敦       </td>
-        <td>克勒肯维尔      </td>
-        <td>18         </td>
-        <td>449.0</td>
-        <td>4.0%</td>
-        <td>959     </td>
+        <td>                      伦敦       </td>
+        <td>                      克勒肯维尔      </td>
+        <td>                      449.0</td>
+        <td class="mobile-hidden">18         </td>
+        <td class="mobile-hidden">4.0%</td>
+        <td class="mobile-hidden">959     </td>
       </tr>
 
     </table>

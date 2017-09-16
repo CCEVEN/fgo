@@ -70,9 +70,8 @@
     }
     
 
-    .item-back {
-      margin-left: 3%;
-      margin-top: 30px;
+    .item.back {
+
     }
 
     .num {
@@ -102,6 +101,11 @@
       left: 65%
     }
 
+    .table {
+      margin-left: 10px;
+      width: 85%;
+    }
+
     @media screen and (max-width:  450px) {
       .flex-container{
         margin: 20px 10px;
@@ -124,9 +128,8 @@
         height: 60px;
         margin: 4px 10px;
       }
-      .item .back {
-        width: 60px;
-        height: 66px; 
+      .item.back {
+
       }
       .num {
         font-size: 10px;
@@ -140,6 +143,20 @@
       .num-3 {
         left: 60%
       }
+
+      .table {
+        margin-left: 0;
+      }
+
+      .mobile-hidden {
+        display: none;
+      }
+  
+    .table {
+      margin-left: 0;
+      width: 100%;
+    }
+
 
     }
 
@@ -166,55 +183,55 @@
       <tr>
         <th>Area</th>
         <th>Quest</th>
-        <th>AP</th>
         <th>AP per Drop</th>
-        <th>Drop Chance</th>
-        <th>Sample</th>
+        <th class="mobile-hidden">AP</th>
+        <th class="mobile-hidden">Drop Chance</th>
+        <th class="mobile-hidden">Sample</th>
       </tr>
 
       <tr>
-        <td>卡美洛       </td>
-        <td>死之荒野       </td>
-        <td>19         </td>
-        <td>29.7</td>
-        <td>64.0%</td>
-        <td>3428     </td>
+        <td>                      卡美洛       </td>
+        <td>                      死之荒野       </td>
+        <td>                      29.7</td>
+        <td class="mobile-hidden">19         </td>
+        <td class="mobile-hidden">64.0%</td>
+        <td class="mobile-hidden">3428     </td>
       </tr>
 
       <tr>
-        <td>卡美洛       </td>
-        <td>大神殿      </td>
-        <td>22         </td>
-        <td>52.5</td>
-        <td>41.9%</td>
-        <td>847     </td>
+        <td>                      卡美洛       </td>
+        <td>                      大神殿      </td>
+        <td>                      52.5</td>
+        <td class="mobile-hidden">22         </td>
+        <td class="mobile-hidden">41.9%</td>
+        <td class="mobile-hidden">847     </td>
       </tr>
 
       <tr>
-        <td>阿加森       </td>
-        <td>不夜城      </td>
-        <td>21         </td>
-        <td>56.0</td>
-        <td>37.5%</td>
-        <td>64     </td>
+        <td>                      阿加森       </td>
+        <td>                      不夜城      </td>
+        <td>                      56.0</td>
+        <td class="mobile-hidden">21         </td>
+        <td class="mobile-hidden">37.5%</td>
+        <td class="mobile-hidden">64     </td>
       </tr>
 
       <tr>
-        <td>阿加森       </td>
-        <td>北の断崖      </td>
-        <td>21         </td>
-        <td>65.2</td>
-        <td>32.2%</td>
-        <td>59     </td>
+        <td>                      阿加森       </td>
+        <td>                      北の断崖      </td>
+        <td>                      65.2</td>
+        <td class="mobile-hidden">21         </td>
+        <td class="mobile-hidden">32.2%</td>
+        <td class="mobile-hidden">59     </td>
       </tr>
 
       <tr>
-        <td>卡美洛       </td>
-        <td>隐秘之村      </td>
-        <td>21         </td>
-        <td>70.4</td>
-        <td>29.8%</td>
-        <td>862     </td>
+        <td>                      卡美洛       </td>
+        <td>                      隐秘之村      </td>
+        <td>                      70.4</td>
+        <td class="mobile-hidden">21         </td>
+        <td class="mobile-hidden">29.8%</td>
+        <td class="mobile-hidden">862     </td>
       </tr>
 
     </table>

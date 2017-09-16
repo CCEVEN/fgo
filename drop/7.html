@@ -70,9 +70,8 @@
     }
     
 
-    .item-back {
-      margin-left: 3%;
-      margin-top: 30px;
+    .item.back {
+
     }
 
     .num {
@@ -102,6 +101,11 @@
       left: 65%
     }
 
+    .table {
+      margin-left: 10px;
+      width: 85%;
+    }
+
     @media screen and (max-width:  450px) {
       .flex-container{
         margin: 20px 10px;
@@ -124,9 +128,8 @@
         height: 60px;
         margin: 4px 10px;
       }
-      .item .back {
-        width: 60px;
-        height: 66px; 
+      .item.back {
+
       }
       .num {
         font-size: 10px;
@@ -140,6 +143,20 @@
       .num-3 {
         left: 60%
       }
+
+      .table {
+        margin-left: 0;
+      }
+
+      .mobile-hidden {
+        display: none;
+      }
+  
+    .table {
+      margin-left: 0;
+      width: 100%;
+    }
+
 
     }
 
@@ -166,37 +183,37 @@
       <tr>
         <th>Area</th>
         <th>Quest</th>
-        <th>AP</th>
         <th>AP per Drop</th>
-        <th>Drop Chance</th>
-        <th>Sample</th>
+        <th class="mobile-hidden">AP</th>
+        <th class="mobile-hidden">Drop Chance</th>
+        <th class="mobile-hidden">Sample</th>
       </tr>
 
       <tr>
-        <td>巴比伦       </td>
-        <td>ニップル      </td>
-        <td>21         </td>
-        <td>163.3</td>
-        <td>12.9%</td>
-        <td>317     </td>
+        <td>                      巴比伦       </td>
+        <td>                      ニップル      </td>
+        <td>                      163.3</td>
+        <td class="mobile-hidden">21         </td>
+        <td class="mobile-hidden">12.9%</td>
+        <td class="mobile-hidden">317     </td>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周四)       </td>
-        <td>骑之修炼场 40AP      </td>
-        <td>40         </td>
-        <td>533.3</td>
-        <td>7.5%</td>
-        <td>2440     </td>
+        <td>                      迦勒底之门 (周四)       </td>
+        <td>                      骑之修炼场 40AP      </td>
+        <td>                      533.3</td>
+        <td class="mobile-hidden">40         </td>
+        <td class="mobile-hidden">7.5%</td>
+        <td class="mobile-hidden">2440     </td>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周四)       </td>
-        <td>骑之修炼场 30AP      </td>
-        <td>30         </td>
-        <td>936.0</td>
-        <td>3.2%</td>
-        <td>634     </td>
+        <td>                      迦勒底之门 (周四)       </td>
+        <td>                      骑之修炼场 30AP      </td>
+        <td>                      936.0</td>
+        <td class="mobile-hidden">30         </td>
+        <td class="mobile-hidden">3.2%</td>
+        <td class="mobile-hidden">634     </td>
       </tr>
 
     </table>

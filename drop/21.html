@@ -70,9 +70,8 @@
     }
     
 
-    .item-back {
-      margin-left: 3%;
-      margin-top: 30px;
+    .item.back {
+
     }
 
     .num {
@@ -102,6 +101,11 @@
       left: 65%
     }
 
+    .table {
+      margin-left: 10px;
+      width: 85%;
+    }
+
     @media screen and (max-width:  450px) {
       .flex-container{
         margin: 20px 10px;
@@ -124,9 +128,8 @@
         height: 60px;
         margin: 4px 10px;
       }
-      .item .back {
-        width: 60px;
-        height: 66px; 
+      .item.back {
+
       }
       .num {
         font-size: 10px;
@@ -140,6 +143,20 @@
       .num-3 {
         left: 60%
       }
+
+      .table {
+        margin-left: 0;
+      }
+
+      .mobile-hidden {
+        display: none;
+      }
+  
+    .table {
+      margin-left: 0;
+      width: 100%;
+    }
+
 
     }
 
@@ -166,55 +183,55 @@
       <tr>
         <th>Area</th>
         <th>Quest</th>
-        <th>AP</th>
         <th>AP per Drop</th>
-        <th>Drop Chance</th>
-        <th>Sample</th>
+        <th class="mobile-hidden">AP</th>
+        <th class="mobile-hidden">Drop Chance</th>
+        <th class="mobile-hidden">Sample</th>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周二)       </td>
-        <td>枪之修炼场 40AP      </td>
-        <td>40         </td>
-        <td>74.5</td>
-        <td>53.7%</td>
-        <td>4487     </td>
+        <td>                      迦勒底之门 (周二)       </td>
+        <td>                      枪之修炼场 40AP      </td>
+        <td>                      74.5</td>
+        <td class="mobile-hidden">40         </td>
+        <td class="mobile-hidden">53.7%</td>
+        <td class="mobile-hidden">4487     </td>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周二)       </td>
-        <td>枪之修炼场 30AP      </td>
-        <td>30         </td>
-        <td>84.4</td>
-        <td>35.5%</td>
-        <td>817     </td>
+        <td>                      迦勒底之门 (周二)       </td>
+        <td>                      枪之修炼场 30AP      </td>
+        <td>                      84.4</td>
+        <td class="mobile-hidden">30         </td>
+        <td class="mobile-hidden">35.5%</td>
+        <td class="mobile-hidden">817     </td>
       </tr>
 
       <tr>
-        <td>北美       </td>
-        <td>丹佛      </td>
-        <td>17         </td>
-        <td>110.5</td>
-        <td>15.4%</td>
-        <td>113     </td>
+        <td>                      北美       </td>
+        <td>                      丹佛      </td>
+        <td>                      110.5</td>
+        <td class="mobile-hidden">17         </td>
+        <td class="mobile-hidden">15.4%</td>
+        <td class="mobile-hidden">113     </td>
       </tr>
 
       <tr>
-        <td>北美       </td>
-        <td>里弗顿      </td>
-        <td>17         </td>
-        <td>210.0</td>
-        <td>8.1%</td>
-        <td>210     </td>
+        <td>                      北美       </td>
+        <td>                      里弗顿      </td>
+        <td>                      210.0</td>
+        <td class="mobile-hidden">17         </td>
+        <td class="mobile-hidden">8.1%</td>
+        <td class="mobile-hidden">210     </td>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周二)       </td>
-        <td>枪之修炼场 20AP      </td>
-        <td>20         </td>
-        <td>261.1</td>
-        <td>7.7%</td>
-        <td>235     </td>
+        <td>                      迦勒底之门 (周二)       </td>
+        <td>                      枪之修炼场 20AP      </td>
+        <td>                      261.1</td>
+        <td class="mobile-hidden">20         </td>
+        <td class="mobile-hidden">7.7%</td>
+        <td class="mobile-hidden">235     </td>
       </tr>
 
     </table>

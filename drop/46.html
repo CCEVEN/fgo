@@ -70,9 +70,8 @@
     }
     
 
-    .item-back {
-      margin-left: 3%;
-      margin-top: 30px;
+    .item.back {
+
     }
 
     .num {
@@ -102,6 +101,11 @@
       left: 65%
     }
 
+    .table {
+      margin-left: 10px;
+      width: 85%;
+    }
+
     @media screen and (max-width:  450px) {
       .flex-container{
         margin: 20px 10px;
@@ -124,9 +128,8 @@
         height: 60px;
         margin: 4px 10px;
       }
-      .item .back {
-        width: 60px;
-        height: 66px; 
+      .item.back {
+
       }
       .num {
         font-size: 10px;
@@ -140,6 +143,20 @@
       .num-3 {
         left: 60%
       }
+
+      .table {
+        margin-left: 0;
+      }
+
+      .mobile-hidden {
+        display: none;
+      }
+  
+    .table {
+      margin-left: 0;
+      width: 100%;
+    }
+
 
     }
 
@@ -166,55 +183,55 @@
       <tr>
         <th>Area</th>
         <th>Quest</th>
-        <th>AP</th>
         <th>AP per Drop</th>
-        <th>Drop Chance</th>
-        <th>Sample</th>
+        <th class="mobile-hidden">AP</th>
+        <th class="mobile-hidden">Drop Chance</th>
+        <th class="mobile-hidden">Sample</th>
       </tr>
 
       <tr>
-        <td>北美       </td>
-        <td>夏洛特      </td>
-        <td>20         </td>
-        <td>31.3</td>
-        <td>64.0%</td>
-        <td>4949     </td>
+        <td>                      北美       </td>
+        <td>                      夏洛特      </td>
+        <td>                      31.3</td>
+        <td class="mobile-hidden">20         </td>
+        <td class="mobile-hidden">64.0%</td>
+        <td class="mobile-hidden">4949     </td>
       </tr>
 
       <tr>
-        <td>卡美洛       </td>
-        <td>西之村遗迹      </td>
-        <td>20         </td>
-        <td>40.9</td>
-        <td>48.9%</td>
-        <td>356     </td>
+        <td>                      卡美洛       </td>
+        <td>                      西之村遗迹      </td>
+        <td>                      40.9</td>
+        <td class="mobile-hidden">20         </td>
+        <td class="mobile-hidden">48.9%</td>
+        <td class="mobile-hidden">356     </td>
       </tr>
 
       <tr>
-        <td>北美       </td>
-        <td>里弗顿      </td>
-        <td>17         </td>
-        <td>50.3</td>
-        <td>33.8%</td>
-        <td>210     </td>
+        <td>                      北美       </td>
+        <td>                      里弗顿      </td>
+        <td>                      50.3</td>
+        <td class="mobile-hidden">17         </td>
+        <td class="mobile-hidden">33.8%</td>
+        <td class="mobile-hidden">210     </td>
       </tr>
 
       <tr>
-        <td>七丘之城       </td>
-        <td>玛西格利亚      </td>
-        <td>9         </td>
-        <td>52.1</td>
-        <td>17.3%</td>
-        <td>110     </td>
+        <td>                      七丘之城       </td>
+        <td>                      玛西格利亚      </td>
+        <td>                      52.1</td>
+        <td class="mobile-hidden">9         </td>
+        <td class="mobile-hidden">17.3%</td>
+        <td class="mobile-hidden">110     </td>
       </tr>
 
       <tr>
-        <td>阿加森       </td>
-        <td>イース      </td>
-        <td>21         </td>
-        <td>58.1</td>
-        <td>36.1%</td>
-        <td>227     </td>
+        <td>                      阿加森       </td>
+        <td>                      イース      </td>
+        <td>                      58.1</td>
+        <td class="mobile-hidden">21         </td>
+        <td class="mobile-hidden">36.1%</td>
+        <td class="mobile-hidden">227     </td>
       </tr>
 
     </table>

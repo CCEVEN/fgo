@@ -70,9 +70,8 @@
     }
     
 
-    .item-back {
-      margin-left: 3%;
-      margin-top: 30px;
+    .item.back {
+
     }
 
     .num {
@@ -102,6 +101,11 @@
       left: 65%
     }
 
+    .table {
+      margin-left: 10px;
+      width: 85%;
+    }
+
     @media screen and (max-width:  450px) {
       .flex-container{
         margin: 20px 10px;
@@ -124,9 +128,8 @@
         height: 60px;
         margin: 4px 10px;
       }
-      .item .back {
-        width: 60px;
-        height: 66px; 
+      .item.back {
+
       }
       .num {
         font-size: 10px;
@@ -140,6 +143,20 @@
       .num-3 {
         left: 60%
       }
+
+      .table {
+        margin-left: 0;
+      }
+
+      .mobile-hidden {
+        display: none;
+      }
+  
+    .table {
+      margin-left: 0;
+      width: 100%;
+    }
+
 
     }
 
@@ -166,55 +183,55 @@
       <tr>
         <th>Area</th>
         <th>Quest</th>
-        <th>AP</th>
         <th>AP per Drop</th>
-        <th>Drop Chance</th>
-        <th>Sample</th>
+        <th class="mobile-hidden">AP</th>
+        <th class="mobile-hidden">Drop Chance</th>
+        <th class="mobile-hidden">Sample</th>
       </tr>
 
       <tr>
-        <td>卡美洛       </td>
-        <td>圣都市街      </td>
-        <td>20         </td>
-        <td>161.4</td>
-        <td>12.4%</td>
-        <td>5037     </td>
+        <td>                      卡美洛       </td>
+        <td>                      圣都市街      </td>
+        <td>                      161.4</td>
+        <td class="mobile-hidden">20         </td>
+        <td class="mobile-hidden">12.4%</td>
+        <td class="mobile-hidden">5037     </td>
       </tr>
 
       <tr>
-        <td>新宿       </td>
-        <td>タワー最上階      </td>
-        <td>21         </td>
-        <td>210.0</td>
-        <td>10.0%</td>
-        <td>160     </td>
+        <td>                      新宿       </td>
+        <td>                      タワー最上階      </td>
+        <td>                      210.0</td>
+        <td class="mobile-hidden">21         </td>
+        <td class="mobile-hidden">10.0%</td>
+        <td class="mobile-hidden">160     </td>
       </tr>
 
       <tr>
-        <td>北美       </td>
-        <td>华盛顿      </td>
-        <td>20         </td>
-        <td>291.8</td>
-        <td>6.9%</td>
-        <td>321     </td>
+        <td>                      北美       </td>
+        <td>                      华盛顿      </td>
+        <td>                      291.8</td>
+        <td class="mobile-hidden">20         </td>
+        <td class="mobile-hidden">6.9%</td>
+        <td class="mobile-hidden">321     </td>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周日)       </td>
-        <td>剑之修炼场 40AP      </td>
-        <td>40         </td>
-        <td>507.6</td>
-        <td>7.9%</td>
-        <td>3805     </td>
+        <td>                      迦勒底之门 (周日)       </td>
+        <td>                      剑之修炼场 40AP      </td>
+        <td>                      507.6</td>
+        <td class="mobile-hidden">40         </td>
+        <td class="mobile-hidden">7.9%</td>
+        <td class="mobile-hidden">3805     </td>
       </tr>
 
       <tr>
-        <td>迦勒底之门 (周日)       </td>
-        <td>剑之修炼场 30AP      </td>
-        <td>30         </td>
-        <td>819.0</td>
-        <td>3.7%</td>
-        <td>3358     </td>
+        <td>                      迦勒底之门 (周日)       </td>
+        <td>                      剑之修炼场 30AP      </td>
+        <td>                      819.0</td>
+        <td class="mobile-hidden">30         </td>
+        <td class="mobile-hidden">3.7%</td>
+        <td class="mobile-hidden">3358     </td>
       </tr>
 
     </table>
