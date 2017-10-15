@@ -1,0 +1,518 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi">
+  <meta name="renderer" content="webkit">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>FGO Servant</title>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2246f09bef1daa9c8bcc3ddec3239f8e";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  
+  
+  <!-- <link rel="stylesheet" type="text/css" href="../static/css/layout.css"> -->
+
+  <style type="text/css">
+    /* Layout */
+    html, body {
+      overflow:hidden;
+      overflow-y:auto;
+      overflow-x:hidden;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    a, 
+    a:hover,
+    a:link,
+    a:active,
+    a:visited
+     {
+      text-decoration : none;
+    } 
+
+    .flex-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+
+      margin: 50px;
+    }
+    /* Layout */
+
+
+    html {
+      max-width: 95vw;
+    }
+
+    .heads {
+      width: 70%;
+      margin: auto;
+      margin-top: 30px;
+    }
+    .head img{
+      width: 97px;
+      height: 106px;
+      margin: 10px 15px;
+    }
+    .word {
+      width: 10vh;
+    }
+    .level-needs {
+      list-style-type: none;
+    }
+
+    .item.thumb {
+      width: 5.0vw;   /* 50px */
+      height: 5.5vw;  /* 55px */
+      margin-top: .5vw;
+    }
+    .material-wrapper {
+      display: inline-block;
+      width: 8.5vw; /* 85px */
+      font-weight: bold;
+    }
+
+    .total > .word {
+      margin-right: 40px;
+    }
+
+    .materials, .level-need {
+      width: 40vw;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+
+    }
+
+    @media screen and (max-width:  450px) {
+      .flex-container{
+        margin: 20px 10px;
+      }
+
+      .head img{
+        width: 55px;
+        height: 60px;
+        margin: 4px 10px;
+      }
+      .heads {
+        width: 90%;
+      }
+      .materials, .level-need {
+        width: 320px;
+      }
+      .materials {
+        margin-left: 12vw;
+      }
+
+
+  }
+
+  @media screen and (max-width:  510px) {
+    .flex-container{
+      margin: 20px 10px;
+    }
+  }
+
+  @media screen and (max-width:  1000px) {
+    .item.thumb {
+      width: 50px;   /* 50px */
+      height: 55px;  /* 55px */
+    }
+    .material-wrapper {
+      display: inline-block;
+      width: 85px; /* 85px */
+      font-weight: bold;
+    }
+  }
+
+  </style>
+
+
+</head>
+<body>
+
+  <ul class="nav nav-tabs">
+    <li class="nav-tab item"><a href="../item.html">Items</a></li>
+    <li class="nav-tab servant"><a href="../servant.html">Servants</a></li>
+    <li class="nav-tab drop"><a href="../drop.html">Drops</a></li>
+  </ul>
+
+  <div id="content">
+    <div class="head back">
+      <a href="../servant.html">
+        <img src="http://file.fgowiki.fgowiki.com/fgo/head/187.jpg">
+      </a>
+    </div>
+
+      <div class="break flex-container">
+
+        <h3 class="word">break: </h3>
+
+        <ul class="level-needs">
+
+            <li class="level-need">
+
+
+                <span class="material-wrapper">
+                  <a href="../drop/18.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/figure1s.jpg">
+                  </a>
+                  <span>4</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+
+                <span class="material-wrapper">
+                  <a href="../drop/18.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/figure1s.jpg">
+                  </a>
+                  <span>10</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../drop/46.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/powder.jpg">
+                  </a>
+                  <span>12</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+
+                <span class="material-wrapper">
+                  <a href="../drop/17.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/figure1g.jpg">
+                  </a>
+                  <span>4</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../drop/44.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/plate.jpg">
+                  </a>
+                  <span>24</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../drop/79.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/yinmao.jpg">
+                  </a>
+                  <span>3</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+
+                <span class="material-wrapper">
+                  <a href="../drop/17.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/figure1g.jpg">
+                  </a>
+                  <span>10</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../drop/79.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/yinmao.jpg">
+                  </a>
+                  <span>5</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../drop/80.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/gouyu.jpg">
+                  </a>
+                  <span>10</span>
+                </span>
+
+            </li>
+
+        </ul>
+
+      </div>
+
+      <div class="skill flex-container">
+
+        <h3 class="word">skill: </h3>
+
+        <ul class="level-needs">
+
+            <li class="level-need">
+
+
+                <span class="material-wrapper">
+                  <a href="../drop/60.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/sphere01.jpg">
+                  </a>
+                  <span>4</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+
+                <span class="material-wrapper">
+                  <a href="../drop/60.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/sphere01.jpg">
+                  </a>
+                  <span>10</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+
+                <span class="material-wrapper">
+                  <a href="../drop/49.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/ruby01.jpg">
+                  </a>
+                  <span>4</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+
+                <span class="material-wrapper">
+                  <a href="../drop/49.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/ruby01.jpg">
+                  </a>
+                  <span>10</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../drop/44.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/plate.jpg">
+                  </a>
+                  <span>12</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+
+                <span class="material-wrapper">
+                  <a href="../drop/67.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/star01.jpg">
+                  </a>
+                  <span>4</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../drop/44.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/plate.jpg">
+                  </a>
+                  <span>24</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+
+                <span class="material-wrapper">
+                  <a href="../drop/67.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/star01.jpg">
+                  </a>
+                  <span>10</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../drop/46.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/powder.jpg">
+                  </a>
+                  <span>8</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+
+                <span class="material-wrapper">
+                  <a href="../drop/46.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/powder.jpg">
+                  </a>
+                  <span>16</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../drop/9.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/cluster.jpg">
+                  </a>
+                  <span>5</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+
+                <span class="material-wrapper">
+                  <a href="../drop/9.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/cluster.jpg">
+                  </a>
+                  <span>15</span>
+                </span>
+
+                <span class="material-wrapper">
+                  <a href="../drop/47.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/qiqi.jpg">
+                  </a>
+                  <span>8</span>
+                </span>
+
+            </li>
+
+            <li class="level-need">
+
+
+                <span class="material-wrapper">
+                  <a href="../drop/10.html">
+                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/cubes.jpg">
+                  </a>
+                  <span>1</span>
+                </span>
+
+            </li>
+
+        </ul>
+
+      </div>
+
+    <div class="total flex-container">
+    <h3 class="word">total: </h3>
+      
+      <div class="materials">
+        <span class="material-wrapper">
+          <a href="../drop/44.html">
+            <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/plate.jpg">
+          </a>
+          <span>132</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../drop/46.html">
+            <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/powder.jpg">
+          </a>
+          <span>84</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../drop/9.html">
+            <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/cluster.jpg">
+          </a>
+          <span>60</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../drop/80.html">
+            <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/gouyu.jpg">
+          </a>
+          <span>10</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../drop/47.html">
+            <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/qiqi.jpg">
+          </a>
+          <span>24</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../drop/79.html">
+            <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/yinmao.jpg">
+          </a>
+          <span>8</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../drop/10.html">
+            <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/cubes.jpg">
+          </a>
+          <span>3</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../drop/60.html">
+            <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/sphere01.jpg">
+          </a>
+          <span>42</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../drop/49.html">
+            <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/ruby01.jpg">
+          </a>
+          <span>42</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../drop/67.html">
+            <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/star01.jpg">
+          </a>
+          <span>42</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../drop/18.html">
+            <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/figure1s.jpg">
+          </a>
+          <span>14</span>
+        </span>
+        <span class="material-wrapper">
+          <a href="../drop/17.html">
+            <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/figure1g.jpg">
+          </a>
+          <span>14</span>
+        </span>
+      </div>
+
+    </div>
+
+    
+</div>
+
+
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+     activate_tab()
+
+    })
+
+
+    function activate_tab() {
+      let cur_tab = $('.nav-tab.servant')
+      cur_tab.addClass('active')
+    }
+
+
+  </script>
+
+  
+
+</body>
+</html>
