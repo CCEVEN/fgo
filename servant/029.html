@@ -8,8 +8,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi">
   <meta name="renderer" content="webkit">
+  
   <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
+  
   <title>FGO Servant</title>
 
   <script>
@@ -24,7 +25,6 @@
   
   
   <!-- <link rel="stylesheet" type="text/css" href="../static/css/layout.css"> -->
-
   <style type="text/css">
     /* Layout */
     html, body {
@@ -101,6 +101,14 @@
 
     }
 
+    .nav-tabs.servant-classes {
+      margin: 20px 0 0 0;
+    }
+
+    .tab-content.servant-classes {
+
+    }
+
     @media screen and (max-width:  450px) {
       .flex-container{
         margin: 20px 10px;
@@ -147,7 +155,7 @@
 
 </head>
 <body>
-
+  
   <ul class="nav nav-tabs">
     <li class="nav-tab item"><a href="../item.html">Items</a></li>
     <li class="nav-tab servant"><a href="../servant.html">Servants</a></li>
@@ -155,6 +163,7 @@
   </ul>
 
   <div id="content">
+    
     <div class="head back">
       <a href="../servant.html">
         <img src="http://file.fgowiki.fgowiki.com/fgo/head/029.jpg">
@@ -478,18 +487,22 @@
     </div>
 
     
-</div>
 
+  </div>
 
-  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  
+  <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  
   
 
   <script type="text/javascript">
     $(document).ready(function () {
 
-     activate_tab()
+      activate_tab()
+
+      $('.servant-class.Saber').addClass('active')
+      $('#Saber').addClass('active')
 
     })
 
@@ -501,6 +514,7 @@
 
 
   </script>
+
 
   
 
