@@ -8,7 +8,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi">
   <meta name="renderer" content="webkit">
-  
   <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   
   <title>FGO Items</title>
@@ -119,6 +118,14 @@
       left: 65%
     }
 
+    .delete, .delete-dropdown{
+      margin-left: 10px;
+    }
+
+    .delete-dropdown{
+      visibility: hidden;
+    }
+
     @media screen and (max-width:  450px) {
       .flex-container{
         margin: 20px 10px;
@@ -181,34 +188,51 @@
       </div>
     <div>
 
-        <div class="break flex-container">
+      <p><button class="btn btn-default delete" data-toggle="button">Delete Mode</button></p>
+
+      <div class="btn-group delete-dropdown">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Delete By
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="javascript:;" class="delete-by star-below-5">Star below 5</a></li>
+          <li><a href="javascript:;" class="delete-by star-below-4">Star below 4</a></li>
+          <li><a href="javascript:;" class="delete-by star-5">Star 5</a></li>
+          <li><a href="javascript:;" class="delete-by star-4">Star 4</a></li>
+          <li><a href="javascript:;" class="delete-by star-3">Star 3</a></li>
+          <li><a href="javascript:;" class="delete-by star-2">Star 2</a></li>
+          <li><a href="javascript:;" class="delete-by star-1">Star 1</a></li>
+        </ul>
+      </div>
+
+        <div class="break flex-container total-container">
         
           <h3 class="total">break: 92</h3>
 
           <div class="flex-container heads">
               <div class="flex-item head">
-                <a href="../servant/157.html">
+                <a href="../servant/157.html" data-num="157">
                   <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/157.jpg);">
                         <span class="num num-2">30</span>
                   </div> 
                 </a>
               </div>
               <div class="flex-item head">
-                <a href="../servant/158.html">
+                <a href="../servant/158.html" data-num="158">
                   <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/158.jpg);">
                         <span class="num num-1">8</span>
                   </div> 
                 </a>
               </div>
               <div class="flex-item head">
-                <a href="../servant/178.html">
+                <a href="../servant/178.html" data-num="178">
                   <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/178.jpg);">
                         <span class="num num-2">18</span>
                   </div> 
                 </a>
               </div>
               <div class="flex-item head">
-                <a href="../servant/188.html">
+                <a href="../servant/188.html" data-num="188">
                   <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/188.jpg);">
                         <span class="num num-2">36</span>
                   </div> 
@@ -217,55 +241,55 @@
           </div>
 
         </div>
-        <div class="skill flex-container">
+        <div class="skill flex-container total-container">
         
           <h3 class="total">skill: 1224</h3>
 
           <div class="flex-container heads">
               <div class="flex-item head">
-                <a href="../servant/156.html">
+                <a href="../servant/156.html" data-num="156">
                   <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/156.jpg);">
                         <span class="num num-3">216</span>
                   </div> 
                 </a>
               </div>
               <div class="flex-item head">
-                <a href="../servant/161.html">
+                <a href="../servant/161.html" data-num="161">
                   <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/161.jpg);">
                         <span class="num num-3">216</span>
                   </div> 
                 </a>
               </div>
               <div class="flex-item head">
-                <a href="../servant/159.html">
+                <a href="../servant/159.html" data-num="159">
                   <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/159.jpg);">
                         <span class="num num-3">180</span>
                   </div> 
                 </a>
               </div>
               <div class="flex-item head">
-                <a href="../servant/170.html">
+                <a href="../servant/170.html" data-num="170">
                   <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/170.jpg);">
                         <span class="num num-3">180</span>
                   </div> 
                 </a>
               </div>
               <div class="flex-item head">
-                <a href="../servant/176.html">
+                <a href="../servant/176.html" data-num="176">
                   <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/176.jpg);">
                         <span class="num num-3">180</span>
                   </div> 
                 </a>
               </div>
               <div class="flex-item head">
-                <a href="../servant/178.html">
+                <a href="../servant/178.html" data-num="178">
                   <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/178.jpg);">
                         <span class="num num-3">108</span>
                   </div> 
                 </a>
               </div>
               <div class="flex-item head">
-                <a href="../servant/172.html">
+                <a href="../servant/172.html" data-num="172">
                   <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/172.jpg);">
                         <span class="num num-3">144</span>
                   </div> 
@@ -280,20 +304,107 @@
   </div>
 
   
-  <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+  <script src="https://cdn.bootcss.com/bootstrap/2.3.1/js/bootstrap-button.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/2.3.1/js/bootstrap-button.js"></script>
+    
   
 <script type="text/javascript">
   $(document).ready(function () {
 
-   activate_tab()
+    activate_tab()
+
+    let heads = $('.flex-item.head a');
+    let break_heads = $('.break .flex-item.head a');
+    let skill_heads = $('.skill .flex-item.head a');
+    let nums = [[], []]
+
+    nums[0] = get_eles_attr(break_heads, 'data-num')
+    nums[1] = get_eles_attr(skill_heads, 'data-num')
+
+    content = $('#content')
+    $('.delete').on('click', function(){
+      content.toggleClass('delete-mode')
+      if (content.hasClass('delete-mode')) {
+        bind_delete(break_heads, 'break')
+        bind_delete(skill_heads, 'skill')
+        $('.delete-dropdown').css('visibility', 'visible')
+      } else {
+        break_heads.off('click')
+        skill_heads.off('click')
+        $('.delete-dropdown').css('visibility', 'hidden')
+        for (let i = 0; i < break_heads.length; i++) {
+          $(break_heads[i]).attr('href', `/servant/${nums[0][i]}/`)
+        }
+        for (let i = 0; i < skill_heads.length; i++) {
+          $(skill_heads[i]).attr('href', `/servant/${nums[1][i]}/`)
+        }
+      }
+    })
+
+
+    //url = `../..../static/json/about_ids_names/servant_ids_by_star.json`
+    url = '../static/json/about_ids_names/servant_ids_by_star.json'
+    $.getJSON(url, function(data){
+      for (let i = 1; i <= 5; i++) {
+        $(`.delete-by.star-${i}`).on('click', function(){
+          for (let head of heads) {
+            if (data[i].indexOf($(head).attr('data-num')) !== -1) {
+              head.click()
+            }
+          }
+        })
+      }
+
+      for (let i = 4; i <= 5; i++) {
+        $(`.delete-by.star-below-${i}`).on('click', function(){
+          for (let head of heads) {
+            for (let j = 0; j <= i-1; j++) {
+              if (data[j].indexOf($(head).attr('data-num')) !== -1) {
+                head.click()
+              }
+            }
+
+          }
+        })
+      }
+
+    })
    
   })
 
   function activate_tab() {
     let cur_tab = $('.nav-tab.item')
     cur_tab.addClass('active')
+  }
+
+  function get_eles_attr(eles, attr_name) {
+    let attrs = []
+    for (let i = 0; i < eles.length; i++) {
+      attrs.push($(eles[i]).attr(attr_name))
+    }
+    return attrs
+  }
+
+  function bind_delete(heads) {
+    heads.attr('href', 'javascript:;')
+    // Bind click: Delete servant and subtract the needed material
+    heads.on('click', function(){
+      subtract_num(this)
+    })
+  }
+
+  function subtract_num(head) {
+    let material_num = Number($(head).find('span.num').text())
+    let total = $(head).parents('.total-container').children('.total')
+    let total_text = total.text()
+    let pat = /([a-z]+): (\d+)/
+    let reg_result = pat.exec(total_text)
+    let total_num = Number(reg_result[2])
+    $(head).remove()
+    total_num -= material_num
+    total.text(reg_result[1] + ': ' + total_num)
   }
 
 
