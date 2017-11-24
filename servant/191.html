@@ -599,7 +599,7 @@
 
         } else {
           for (let i = 0; i < heads.length; i++) {
-            $(heads[i]).attr('href', `/servant/${nums[i]}/`)
+            $(heads[i]).attr('href', `./servant/${nums[i]}.html`)
           }
           tbl.css('display', 'none')
           //let trs = $('.tbl_servant tr[data_num]')
@@ -639,6 +639,9 @@
       })
 
       calc.on('click', function () {
+        let result_div = $('.materials.calc-result')
+        result_div.empty()
+        
         let calc_trs = $(`.tbl_servant tr[data-calc='true']`)
         // get level gaps of servants
         let level_pairs = []
@@ -729,9 +732,8 @@
           let all_need = push_items_together(all_skill_need, all_break_need)
           //console.log(all_need)
           all_need.sort((x, y) => ordered_ids.indexOf(x[0]) - ordered_ids.indexOf(y[0]))
-
+          
           let result_div = $('.materials.calc-result')
-          result_div.empty()
           for (let need of all_need) {
             let need_span = $(`<span class="material-wrapper">
                                 <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/${need[1]}.jpg">
@@ -753,7 +755,7 @@
           }
           let result_div = $('.materials.calc-result')
           let need_food = $(`<span class="material-wrapper">
-                              <img class="item thumb" src="https://vignette.wikia.nocookie.net/fategrandorder/images/3/30/4starallexp.png/revision/latest/scale-to-width-down/131?cb=20150821015734">
+                              <img class="item thumb" src="../static/images/material/dogfood.jpg">
                               <span>${dog_foods}</span>
                             </span>`)
           result_div.append(need_food)
