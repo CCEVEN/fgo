@@ -109,6 +109,10 @@
 
     }
 
+    .materials.calc-result {
+      width: 50vw;
+    }
+
     .nav-tabs.servant-classes {
       margin: 20px 0 0 0;
     }
@@ -564,13 +568,334 @@
       $('.servant-class.Saber').addClass('active')
       $('#Saber').addClass('active')
 
+      
+      let heads = $('.flex-item.head a');
+      let nums = new Array();
+      for (let i = 0; i < heads.length; i++) {
+        let num = $(heads[i]).attr('data_num');
+        nums[i] = num;
+      }
+      //console.log(nums)
+      
+
+
+      
+      let tbl = $('.tbl_servant');
+      let trs = $('.tbl_servant tr[data_num]')
+      trs.css('display','none')
+
+      let calc = $('.calc')
+      let checks = $(`.tbl_servant input[type='checkbox']`);
+
+      let result = $('.total.calc-result')
+
+      $('.summation').on('click', function(){
+        heads.toggleClass('sum')
+        calc.toggle()
+        if ($(heads[0]).hasClass('sum')) {
+          heads.attr('href', 'javascript:;')
+          tbl.css('display', 'table')
+          bind_summation()
+          result.show()
+
+        } else {
+          for (let i = 0; i < heads.length; i++) {
+            $(heads[i]).attr('href', `/servant/${nums[i]}/`)
+          }
+          tbl.css('display', 'none')
+          //let trs = $('.tbl_servant tr[data_num]')
+          //trs.css('display','none')
+          heads.off('click')
+          result.hide()
+        }
+      })
+
+      $('button.delete').on('click', function(){
+        let tr = $(this).parent().parent()
+        let data_num = tr.attr('data_num')
+        tr.hide()
+        tr.attr('data-calc', false)
+        let head = $(`.flex-item.head a[data_num='${data_num}']`);
+        head.show()
+      })
+
+      checks.on('change', function(){
+        $(this).toggleClass('checked')
+      })
+
+
+      
+      let url = '.../static/json/extra/skill/skill_names_compl.json'
+      $.getJSON(url, function(data){
+        $.each(data, function(i, datum){
+          let [skill_names, img_names] = datum
+          let padded = pad(i+1, 3)
+          imgs = $(`tr[data_num='${padded}'] td:eq(2) img`)
+          spans = $(`tr[data_num='${padded}'] td:eq(2) span.skill_name`)
+          for (let i = 0; i < imgs.length; i++) {
+            $(imgs[i]).attr('src', `http://file.fgowiki.fgowiki.com/mobile/images/Skill/${img_names[i]}.png`)
+            $(spans[i]).text(skill_names[i])
+          }
+        })
+      })
+
+      calc.on('click', function () {
+        let calc_trs = $(`.tbl_servant tr[data-calc='true']`)
+        // get level gaps of servants
+        let level_pairs = []
+        for (let tr of calc_trs) {
+          let num = $(tr).attr('data_num')
+          let star = $(tr).find('input[data-star]').attr('data-star')
+          let texts = $(tr).find(`td:eq(1) input[type='number']`)
+          let broken = $(tr).find(`td:eq(1) input[type='checkbox']`).hasClass('checked')
+          let level_pair = []
+          for (let text of texts) {
+            level_pair.push($(text).val())
+          }
+          let level_pair_b = {
+            servant_id: num,
+            star: star,
+            broken: broken,
+            level_pair: level_pair
+          }
+          level_pairs.push(level_pair_b)
+        }
+        //console.log(level_pairs)
+
+        let skill_pairs = []
+        for (let tr of calc_trs) {
+          let num = $(tr).attr('data_num')
+          let skill_inputs = $(tr).find('td:eq(2) .skill-input')
+          let servant_level_pairs = []
+          for (let skill_input of skill_inputs) {
+            let texts = $(skill_input).find('input')
+            let level_pair = []
+            for (let text of texts) {
+              val = $(text).val()
+              level_pair.push(val)
+            }
+            servant_level_pairs.push(level_pair)
+          }
+          let servant = {
+            servant_id: num,
+            servant_skill_pairs: servant_level_pairs
+          }
+          skill_pairs.push(servant)
+        }
+
+        //console.log(skill_pairs)
+        //$.ajaxSettings.async = false;
+
+        let url = `.../static/json/extra/star_break_levels.json`
+        let level_breaks = []
+        $.getJSON(url, function(data){
+          for (let level_pair of level_pairs) {
+            level_break = level_to_break(level_pair, data)
+            level_breaks.push(level_break)
+          }
+        })
+
+        
+        url = '.../static/json/servant_need/together_need.json'
+        $.getJSON(url, function(datas){
+          //console.log(datas)
+          let {data, ordered_ids} = datas
+          let servants_skill_need = []
+          for (let skill_pair of skill_pairs) {
+            let {servant_id, servant_skill_pairs} = skill_pair
+            let [bs_level_needs, total_needs, total] = data[servant_id]
+            let [word, skill_needs] = bs_level_needs[1]
+            //console.log(servant_skill_pairs)
+            let servant_skill_need = calc_skill_pairs_needs(skill_needs, servant_skill_pairs)
+            servants_skill_need.push(servant_skill_need)
+          }
+
+          let all_skill_need = servants_skill_need.reduce(push_items_together)
+          //console.log(all_skill_need)
+
+          
+          let servants_break_need = []
+          for (let level_break of level_breaks) {
+            let {servant_id, breaks} = level_break
+            //console.log(breaks)
+            let [bs_level_needs, total_needs, total] = data[servant_id]
+            let [word, break_needs] = bs_level_needs[0]
+            let servant_break_need = calc_skill_needs(break_needs, breaks)
+            servants_break_need.push(servant_break_need)
+          }
+
+          let all_break_need = servants_break_need.reduce(push_items_together)
+          //console.log(all_break_need)
+
+          let all_need = push_items_together(all_skill_need, all_break_need)
+          //console.log(all_need)
+          all_need.sort((x, y) => ordered_ids.indexOf(x[0]) - ordered_ids.indexOf(y[0]))
+
+          let result_div = $('.materials.calc-result')
+          result_div.empty()
+          for (let need of all_need) {
+            let need_span = $(`<span class="material-wrapper">
+                                <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/${need[1]}.jpg">
+                                <span>${need[2]}</span>
+                              </span>`)
+            result_div.append(need_span)
+          }
+          
+        })
+
+        url = '.../static/json/extra/levelup_exps_calc.json'
+        $.getJSON(url, function(data){
+          dog_foods = 0
+          for (let servant_level_pair of level_pairs) {
+            let {level_pair} = servant_level_pair
+            let dog_food = calc_exps(data, level_pair)
+            //console.log(calc_exps(data, level_pair))
+            dog_foods += dog_food
+          }
+          let result_div = $('.materials.calc-result')
+          let need_food = $(`<span class="material-wrapper">
+                              <img class="item thumb" src="https://vignette.wikia.nocookie.net/fategrandorder/images/3/30/4starallexp.png/revision/latest/scale-to-width-down/131?cb=20150821015734">
+                              <span>${dog_foods}</span>
+                            </span>`)
+          result_div.append(need_food)
+          //console.log(dog_foods)
+        })
+
+
+      })
+
+      
     })
+
+    function level_to_break(level_pair_obj, break_levels){
+      let {servant_id, star, broken, level_pair} = level_pair_obj
+      let break_level = break_levels[star]
+      let [low, high] = level_pair
+      low = Number(low)
+      high = Number(high)
+
+      let breaks = []
+      for (let i = 0; i < break_level.length; i++) {
+        if (break_level[i] < high && break_level[i] > low) {
+          breaks.push(i)
+        }
+        if (!broken && break_level[i] == low) {
+          breaks.push(i)
+        }
+      }
+
+      low = Math.min(...breaks)
+      high = Math.max(...breaks)
+
+      return {
+        servant_id: servant_id,
+        star: star,
+        breaks: [low+1, high+2]
+      }
+
+    }
+
+    function calc_exps(exps_levels, pair, exp_per_card=32400) {
+      let [low, high] = pair
+      low = Number(low)
+      high = Number(high)
+      let exps = 0
+      for (let i = low-1; i < high-1; i++) {
+        exps += exps_levels[i]
+      }
+      return Math.ceil(exps/exp_per_card)
+
+    }
+
+    function calc_skill_pairs_needs(skill_needs, skill_pairs) {
+      let needs = []
+      for (let pair of skill_pairs) {
+        need = calc_skill_needs(skill_needs, pair)
+        needs.push(need)
+      }
+      return needs.reduce(push_items_together)
+    }
+
+    function calc_skill_needs(skill_needs, skill_pair) {
+      let [low, high] = skill_pair
+      low = Number(low)
+      high = Number(high)
+      let result = []
+      for (let i = low-1; i <= high-2; i++) {
+        result = push_items_together(result ,skill_needs[i])
+      }
+      return result
+    }
+    // item: [id, name, num]
+    function push_items_together(items_1, items_2) {
+      if (items_1.length !== 0 && items_2.length === 0) {
+        return push_items_together(items_2, items_1)
+      } 
+      let result = JSON.parse(JSON.stringify(items_2))
+      outer:
+      for (let j = 0; j < items_1.length; j++) {
+        //console.log('j:' + j)
+        for (let i = 0; i < result.length; i++) {
+          //console.log('i:' + i)
+          //console.log(result.length)
+          if (items_1[j][0] === result[i][0]) {
+            result[i][2] += items_1[j][2]
+            continue outer;
+          } else if (i === result.length - 1) {
+            result.push(items_1[j])
+            break;
+          }
+        }
+      }
+
+      return result
+    }
+
 
 
     function activate_tab() {
       let cur_tab = $('.nav-tab.servant')
       cur_tab.addClass('active')
     }
+
+    function bind_summation(){
+      let heads = $('.flex-item.head a')
+      for (let i = 0; i < heads.length; i++) {
+        $(heads[i]).on('click', function(){
+          let data_num = this.getAttribute('data_num')
+          let tr = $(`tr[data_num='${data_num}']`)
+          tr.css('display', 'table-row')
+          tr.attr('data-calc', true)
+          $(this).hide()
+        })
+      }
+    }
+
+    function pad(num, n) {  
+      let len = num.toString().length;  
+      while(len < n) {  
+          num = "0" + num;  
+          len++;  
+      }  
+      return num;  
+    }  
+
+    function pad_char(num, n, char, direction) {  
+      let len = num.toString().length * 4.3;  
+      if (direction === 'left') {
+        while(len < n) {  
+          num = char + num;  
+          len++;  
+        }    
+      } else {
+        while(len < n) {  
+          num = num + char;  
+          len++;  
+        }    
+      }
+      return num;  
+    }  
+
 
 
   </script>
