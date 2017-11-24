@@ -223,6 +223,10 @@
       .skill-input {
         transform: translateX(-.5vw);
       }
+
+      .mobile-forbidden {
+        display: none;
+      }
     }
 
   </style>
@@ -638,7 +642,7 @@
 
 
       
-      let url = '.../static/json/extra/skill/skill_names_compl.json'
+      let url = './../static/json/extra/skill/skill_names_compl.json'
       $.getJSON(url, function(data){
         $.each(data, function(i, datum){
           let [skill_names, img_names] = datum
@@ -699,7 +703,7 @@
         //console.log(skill_pairs)
         //$.ajaxSettings.async = false;
 
-        let url = `.../static/json/extra/star_break_levels.json`
+        let url = `./../static/json/extra/star_break_levels.json`
         let level_breaks = []
         $.getJSON(url, function(data){
           for (let level_pair of level_pairs) {
@@ -709,7 +713,7 @@
         })
 
         
-        url = '.../static/json/servant_need/together_need.json'
+        url = './../static/json/servant_need/together_need.json'
         $.getJSON(url, function(datas){
           //console.log(datas)
           let {data, ordered_ids} = datas
@@ -756,7 +760,7 @@
           
         })
 
-        url = '.../static/json/extra/levelup_exps_calc.json'
+        url = './../static/json/extra/levelup_exps_calc.json'
         $.getJSON(url, function(data){
           dog_foods = 0
           for (let servant_level_pair of level_pairs) {
