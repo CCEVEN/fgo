@@ -600,9 +600,7 @@
       })
 
       calc.on('click', function () {
-        let result_div = $('.materials.calc-result')
-        result_div.empty()
-        
+
         let calc_trs = $(`.tbl_servant tr[data-calc='true']`)
         // get level gaps of servants
         let level_pairs = []
@@ -660,7 +658,12 @@
 
         
         url = './../static/json/servant_need/together_need.json'
-        $.getJSON(url, function(datas){
+        $.getJSON({
+          url: url, 
+          global: false,
+          success: function(datas){
+          let result_div = $('.materials.calc-result')
+          result_div.empty()
           //console.log(datas)
           let {data, ordered_ids} = datas
           let servants_skill_need = []
@@ -694,7 +697,6 @@
           //console.log(all_need)
           all_need.sort((x, y) => ordered_ids.indexOf(x[0]) - ordered_ids.indexOf(y[0]))
           
-          let result_div = $('.materials.calc-result')
           for (let need of all_need) {
             let need_span = $(`<span class="material-wrapper">
                                 <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/${need[1]}.jpg">
@@ -702,26 +704,30 @@
                               </span>`)
             result_div.append(need_span)
           }
-          
-        })
 
-        url = './../static/json/extra/levelup_exps_calc.json'
-        $.getJSON(url, function(data){
-          dog_foods = 0
-          for (let servant_level_pair of level_pairs) {
-            let {level_pair} = servant_level_pair
-            let dog_food = calc_exps(data, level_pair)
-            //console.log(calc_exps(data, level_pair))
-            dog_foods += dog_food
-          }
-          let result_div = $('.materials.calc-result')
-          let need_food = $(`<span class="material-wrapper">
-                              <img class="item thumb" src="../static/images/material/dogfood.jpg">
-                              <span>${dog_foods}</span>
-                            </span>`)
-          result_div.append(need_food)
-          //console.log(dog_foods)
-        })
+          let url = './../static/json/extra/levelup_exps_calc.json'
+          $.getJSON(url, function(data){
+            dog_foods = 0
+            for (let servant_level_pair of level_pairs) {
+              let {level_pair} = servant_level_pair
+              let dog_food = calc_exps(data, level_pair)
+              //console.log(calc_exps(data, level_pair))
+              dog_foods += dog_food
+            }
+            let result_div = $('.materials.calc-result')
+            let need_food = $(`<span class="material-wrapper">
+                                <img class="item thumb" src="../static/images/material/dogfood.jpg">
+                                <span>${dog_foods}</span>
+                              </span>`)
+            result_div.append(need_food)
+            //console.log(dog_foods)
+          })
+
+          
+        }
+      })
+
+
 
 
       })
