@@ -860,7 +860,6 @@
       trs.css('display','none')
 
       let calc = $('.calc')
-      let checks = $(`.tbl_servant input[type='checkbox']`);
 
       let result = $('.total.calc-result')
 
@@ -886,10 +885,6 @@
       })
 
 
-
-      checks.on('change', function(){
-        $(this).toggleClass('checked')
-      })
 
 
       
@@ -943,15 +938,18 @@
         //$.ajaxSettings.async = false;
 
         let url = '..../static/json/extra/star_break_levels.json'
-        let level_breaks = []
         $.getJSON(url, function(data){
-          for (let level_pair of level_pairs) {
-            level_break = level_to_break(level_pair, data)
-            level_breaks.push(level_break)
-          }
-        }).done(get_together_need())
+          return data
+        }).then((break_data) => get_together_need(break_data))
+          .then(() => get_exps_calc())
 
-        function get_together_need () {
+        function get_together_need (break_data) {
+          let level_breaks = []
+          for (let level_pair of level_pairs) {
+            level_break = level_to_break(level_pair, break_data)
+            level_breaks.push(level_break)
+            console.log(level_break)
+          }
 
           let url = '..../static/json/servant_need/together_need.json'
           return $.getJSON({
@@ -1000,25 +998,6 @@
                                 </span>`)
               result_div.append(need_span)
             }
-
-            let url = '..../static/json/extra/levelup_exps_calc.json'
-            $.getJSON(url, function(data){
-              dog_foods = 0
-              for (let servant_level_pair of level_pairs) {
-                let {level_pair} = servant_level_pair
-                let dog_food = calc_exps(data, level_pair)
-                //console.log(calc_exps(data, level_pair))
-                dog_foods += dog_food
-              }
-              let result_div = $('.materials.calc-result')
-              let need_food = $(`<span class="material-wrapper">
-                                  <img class="item thumb" src="../static/images/material/dogfood.jpg">
-                                  <span>${dog_foods}</span>
-                                </span>`)
-              result_div.append(need_food)
-              //console.log(dog_foods)
-            })
-
             
             }
           })
@@ -1026,12 +1005,52 @@
 
         }
 
-        
+        function get_exps_calc() {
+          let url = '..../static/json/extra/levelup_exps_calc.json'
+          return $.getJSON(url, function(data){
+            dog_foods = 0
+            for (let servant_level_pair of level_pairs) {
+              let {level_pair} = servant_level_pair
+              let dog_food = calc_exps(data, level_pair)
+              //console.log(calc_exps(data, level_pair))
+              dog_foods += dog_food
+            }
+            let result_div = $('.materials.calc-result')
+            let need_food = $(`<span class="material-wrapper">
+                                <img class="item thumb" src="../static/images/material/dogfood.jpg">
+                                <span>${dog_foods}</span>
+                              </span>`)
+            result_div.append(need_food)
+            //console.log(dog_foods)
+          })
+        }
+
+        //function
+
 
       })
 
 
     })
+
+    function ajax(param, callback){  
+      $.ajax({  
+          url:param,  
+          type:'get',  
+          success:function(data){  
+              callback(data);   
+          },  
+          error:function(data){  
+              console.log('error');  
+          }         
+      })  
+    }  
+
+    function request(url){  
+      return new Promise(function(resolve,reject){  
+          ajax(url,resolve);    
+      });  
+    }  
 
     function level_to_break(level_pair_obj, break_levels){
       let {servant_id, star, broken, level_pair} = level_pair_obj
@@ -1050,13 +1069,20 @@
         }
       }
 
-      low = Math.min(...breaks)
-      high = Math.max(...breaks)
+      if (breaks.length === 0) {
+        breaks = [1, 1]
+      } else {
+        low = Math.min(...breaks)
+        high = Math.max(...breaks)  
+        breaks = [low+1, high+2]      
+      }
+
 
       return {
         servant_id: servant_id,
         star: star,
-        breaks: [low+1, high+2]
+        breaks: breaks,
+        broken: broken
       }
 
     }
@@ -1147,16 +1173,22 @@
             let td_2_input_2 = $(`<input type="number" value="" class="servant_lv to_lv" data-type="to_lv" min="1" max="90" data-star=0><br>`)
             if (data[0].indexOf(data_num) !== -1) {
               td_2_input_2.val(65)
+              td_2_input_2.attr('data-star', 0)
             } else if (data[1].indexOf(data_num) !== -1) {
               td_2_input_2.val(60)
+              td_2_input_2.attr('data-star', 1)
             } else if (data[2].indexOf(data_num) !== -1) {
               td_2_input_2.val(65)
+              td_2_input_2.attr('data-star', 2)
             } else if (data[3].indexOf(data_num) !== -1) {
               td_2_input_2.val(70)
+              td_2_input_2.attr('data-star', 3)
             } else if (data[4].indexOf(data_num) !== -1) {
               td_2_input_2.val(80)
+              td_2_input_2.attr('data-star', 4)
             } else if (data[5].indexOf(data_num) !== -1) {
               td_2_input_2.val(90)
+              td_2_input_2.attr('data-star', 5)
             }
 
             let td_2_checkbox = $(`<label>broken
@@ -1217,6 +1249,10 @@
               .append(td_4)
 
             tbody.append(tr)
+
+            tr.find(`input[type='checkbox']`).on('change', function(){
+              $(this).toggleClass('checked')
+            })
 
             let url = '..../static/json/extra/skill/skill_names_compl.json'
             $.getJSON(url, function(data){
