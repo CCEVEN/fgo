@@ -631,85 +631,88 @@
             level_break = level_to_break(level_pair, data)
             level_breaks.push(level_break)
           }
-        })
+        }).done(get_together_need())
 
-        
-        url = '..../static/json/servant_need/together_need.json'
-        $.getJSON({
-          url: url, 
-          global: false,
-          success: function(datas){
-          let result_div = $('.materials.calc-result')
-          result_div.empty()
-          //console.log(datas)
-          let {data, ordered_ids} = datas
-          let servants_skill_need = []
-          for (let skill_pair of skill_pairs) {
-            let {servant_id, servant_skill_pairs} = skill_pair
-            let [bs_level_needs, total_needs, total] = data[servant_id]
-            let [word, skill_needs] = bs_level_needs[1]
-            //console.log(servant_skill_pairs)
-            let servant_skill_need = calc_skill_pairs_needs(skill_needs, servant_skill_pairs)
-            servants_skill_need.push(servant_skill_need)
-          }
+        function get_together_need () {
 
-          let all_skill_need = servants_skill_need.reduce(push_items_together)
-          //console.log(all_skill_need)
-
-          
-          let servants_break_need = []
-          for (let level_break of level_breaks) {
-            let {servant_id, breaks} = level_break
-            //console.log(breaks)
-            let [bs_level_needs, total_needs, total] = data[servant_id]
-            let [word, break_needs] = bs_level_needs[0]
-            let servant_break_need = calc_skill_needs(break_needs, breaks)
-            servants_break_need.push(servant_break_need)
-          }
-
-          let all_break_need = servants_break_need.reduce(push_items_together)
-          //console.log(all_break_need)
-
-          let all_need = push_items_together(all_skill_need, all_break_need)
-          //console.log(all_need)
-          all_need.sort((x, y) => ordered_ids.indexOf(x[0]) - ordered_ids.indexOf(y[0]))
-          
-          for (let need of all_need) {
-            let need_span = $(`<span class="material-wrapper">
-                                <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/${need[1]}.jpg">
-                                <span>${need[2]}</span>
-                              </span>`)
-            result_div.append(need_span)
-          }
-
-          let url = '..../static/json/extra/levelup_exps_calc.json'
-          $.getJSON(url, function(data){
-            dog_foods = 0
-            for (let servant_level_pair of level_pairs) {
-              let {level_pair} = servant_level_pair
-              let dog_food = calc_exps(data, level_pair)
-              //console.log(calc_exps(data, level_pair))
-              dog_foods += dog_food
-            }
+          let url = '..../static/json/servant_need/together_need.json'
+          return $.getJSON({
+            url: url, 
+            global: false,
+            success: function(datas){
             let result_div = $('.materials.calc-result')
-            let need_food = $(`<span class="material-wrapper">
-                                <img class="item thumb" src="../static/images/material/dogfood.jpg">
-                                <span>${dog_foods}</span>
-                              </span>`)
-            result_div.append(need_food)
-            //console.log(dog_foods)
+            result_div.empty()
+            //console.log(datas)
+            let {data, ordered_ids} = datas
+            let servants_skill_need = []
+            for (let skill_pair of skill_pairs) {
+              let {servant_id, servant_skill_pairs} = skill_pair
+              let [bs_level_needs, total_needs, total] = data[servant_id]
+              let [word, skill_needs] = bs_level_needs[1]
+              //console.log(servant_skill_pairs)
+              let servant_skill_need = calc_skill_pairs_needs(skill_needs, servant_skill_pairs)
+              servants_skill_need.push(servant_skill_need)
+            }
+
+            let all_skill_need = servants_skill_need.reduce(push_items_together)
+            //console.log(all_skill_need)
+
+            
+            let servants_break_need = []
+            for (let level_break of level_breaks) {
+              let {servant_id, breaks} = level_break
+              //console.log(breaks)
+              let [bs_level_needs, total_needs, total] = data[servant_id]
+              let [word, break_needs] = bs_level_needs[0]
+              let servant_break_need = calc_skill_needs(break_needs, breaks)
+              servants_break_need.push(servant_break_need)
+            }
+
+            let all_break_need = servants_break_need.reduce(push_items_together)
+            //console.log(all_break_need)
+
+            let all_need = push_items_together(all_skill_need, all_break_need)
+            //console.log(all_need)
+            all_need.sort((x, y) => ordered_ids.indexOf(x[0]) - ordered_ids.indexOf(y[0]))
+            
+            for (let need of all_need) {
+              let need_span = $(`<span class="material-wrapper">
+                                  <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/${need[1]}.jpg">
+                                  <span>${need[2]}</span>
+                                </span>`)
+              result_div.append(need_span)
+            }
+
+            let url = '..../static/json/extra/levelup_exps_calc.json'
+            $.getJSON(url, function(data){
+              dog_foods = 0
+              for (let servant_level_pair of level_pairs) {
+                let {level_pair} = servant_level_pair
+                let dog_food = calc_exps(data, level_pair)
+                //console.log(calc_exps(data, level_pair))
+                dog_foods += dog_food
+              }
+              let result_div = $('.materials.calc-result')
+              let need_food = $(`<span class="material-wrapper">
+                                  <img class="item thumb" src="../static/images/material/dogfood.jpg">
+                                  <span>${dog_foods}</span>
+                                </span>`)
+              result_div.append(need_food)
+              //console.log(dog_foods)
+            })
+
+            
+            }
           })
 
-          
+
         }
-      })
 
-
-
+        
 
       })
 
-      
+
     })
 
     function level_to_break(level_pair_obj, break_levels){
