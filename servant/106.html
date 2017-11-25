@@ -163,6 +163,15 @@
       display: inline-block;
     }
 
+    .item.thumb + span {
+      position: relative;
+      top: 2vw;
+    }
+    
+    .material-wrapper a + span {
+      position: relative;
+      top: 2vw;
+    }
 
 
     @media screen and (max-width:  450px) {
@@ -643,6 +652,7 @@
         let skill_pairs = []
         for (let tr of calc_trs) {
           let num = $(tr).attr('data_num')
+          let star = $(tr).find('input[data-star]').attr('data-star')
           let skill_inputs = $(tr).find('td:eq(2) .skill-input')
           let servant_level_pairs = []
           for (let skill_input of skill_inputs) {
@@ -656,100 +666,163 @@
           }
           let servant = {
             servant_id: num,
-            servant_skill_pairs: servant_level_pairs
+            servant_skill_pairs: servant_level_pairs,
+            star: star
           }
           skill_pairs.push(servant)
         }
 
         //console.log(skill_pairs)
         //$.ajaxSettings.async = false;
+        Promise
+          .all([get_break_data(), get_together_need(), get_qp_cost(), get_exps_calc()])
+          .then(function (result) {
+            data_handler(result)
+          })
 
-        let url = '..../static/json/extra/star_break_levels.json'
-        $.getJSON(url, function(data){
-          return data
-        }).then((break_data) => get_together_need(break_data))
-          .then(() => get_exps_calc())
+        function data_handler(result) {
+          let [break_data, together_datas, qp_cost, exps_data] = result
 
-        function get_together_need (break_data) {
+          let level_breaks = break_data_handler(break_data)
+
+          together_data_handler(together_datas, level_breaks)
+
+          exps_handler(exps_data)
+
+          qp_cost_handler(qp_cost, level_breaks)
+
+          return 'solved'
+
+        }
+
+        function qp_cost_handler (qp_cost, level_breaks) {
+          let all_break_need_qp = 0
+          for (let level_break of level_breaks) {
+            let {breaks, star} = level_break
+            let [low, high] = breaks
+            let break_need_qp_list = qp_cost['break'][star]
+            let break_need_qp = calc_exps(break_need_qp_list, breaks, 1)
+            //console.log(break_need_qp)
+            all_break_need_qp += break_need_qp
+          }
+          //console.log(all_break_need_qp)
+
+          let all_skill_need_qp = 0
+          for (let skill_pair of skill_pairs) {
+            let {servant_skill_pairs, star} = skill_pair
+            let skill_need_qp_list = qp_cost['skill'][star]
+            for (let servant_skill_pair of servant_skill_pairs) {
+              let break_need_qp = calc_exps(skill_need_qp_list, servant_skill_pair, 1)
+              all_skill_need_qp += break_need_qp
+            }
+          }
+          //console.log(all_skill_need_qp)
+
+          let all_need_qp = all_break_need_qp + all_skill_need_qp
+          all_need_qp = toThousands(all_need_qp)
+
+          let result_div = $('.materials.calc-result')
+          let need_qp = $(`<span class="material-wrapper">
+                              <img class="item thumb" src="../static/images/material/qp.jpg">
+                              <span style="position:relative;left:5vw;top:-2vw;">${all_need_qp}</span>
+                            </span>`)
+          result_div.append(need_qp)
+        }
+
+        function break_data_handler (break_data) {
           let level_breaks = []
           for (let level_pair of level_pairs) {
             level_break = level_to_break(level_pair, break_data)
             level_breaks.push(level_break)
-            console.log(level_break)
+          }
+          return level_breaks
+        }
+
+        function together_data_handler (together_datas, level_breaks) {
+          let result_div = $('.materials.calc-result')
+          result_div.empty()
+          //console.log(together_datas)
+          let {data, ordered_ids} = together_datas
+          let servants_skill_need = []
+          for (let skill_pair of skill_pairs) {
+            let {servant_id, servant_skill_pairs} = skill_pair
+            let [bs_level_needs, total_needs, total] = data[servant_id]
+            let [word, skill_needs] = bs_level_needs[1]
+            //console.log(servant_skill_pairs)
+            let servant_skill_need = calc_skill_pairs_needs(skill_needs, servant_skill_pairs)
+            servants_skill_need.push(servant_skill_need)
           }
 
+          let all_skill_need = servants_skill_need.reduce(push_items_together)
+          //console.log(all_skill_need)
+
+          
+          let servants_break_need = []
+          //console.log(level_breaks)
+          for (let level_break of level_breaks) {
+            let {servant_id, breaks} = level_break
+            //console.log(breaks)
+            let [bs_level_needs, total_needs, total] = data[servant_id]
+            let [word, break_needs] = bs_level_needs[0]
+            let servant_break_need = calc_skill_needs(break_needs, breaks)
+            servants_break_need.push(servant_break_need)
+          }
+
+          let all_break_need = servants_break_need.reduce(push_items_together)
+          //console.log(all_break_need)
+
+          let all_need = push_items_together(all_skill_need, all_break_need)
+          //console.log(all_need)
+          all_need.sort((x, y) => ordered_ids.indexOf(x[0]) - ordered_ids.indexOf(y[0]))
+          
+          for (let need of all_need) {
+            let need_span = $(`<span class="material-wrapper">
+                                <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/${need[1]}.jpg">
+                                <span>${need[2]}</span>
+                              </span>`)
+            result_div.append(need_span)
+          }
+        }
+
+        function exps_handler (data) {
+          dog_foods = 0
+          for (let servant_level_pair of level_pairs) {
+            let {level_pair} = servant_level_pair
+            let dog_food = calc_exps(data, level_pair)
+            //console.log(calc_exps(data, level_pair))
+            dog_foods += dog_food
+          }
+          let result_div = $('.materials.calc-result')
+          let need_food = $(`<span class="material-wrapper">
+                              <img class="item thumb" src="../static/images/material/dogfood.jpg">
+                              <span>${dog_foods}</span>
+                            </span>`)
+          result_div.append(need_food)
+          //console.log(dog_foods)
+        }
+
+
+        function get_qp_cost () {
+          let url = '..../static/json/extra/qp_cost.json'
+          return $.getJSON(url)
+        }
+
+        function get_break_data () {
+          let url = '..../static/json/extra/star_break_levels.json'
+          return $.getJSON(url)
+        }
+
+        function get_together_need (break_data) {
           let url = '..../static/json/servant_need/together_need.json'
           return $.getJSON({
             url: url, 
-            global: false,
-            success: function(datas){
-            let result_div = $('.materials.calc-result')
-            result_div.empty()
-            //console.log(datas)
-            let {data, ordered_ids} = datas
-            let servants_skill_need = []
-            for (let skill_pair of skill_pairs) {
-              let {servant_id, servant_skill_pairs} = skill_pair
-              let [bs_level_needs, total_needs, total] = data[servant_id]
-              let [word, skill_needs] = bs_level_needs[1]
-              //console.log(servant_skill_pairs)
-              let servant_skill_need = calc_skill_pairs_needs(skill_needs, servant_skill_pairs)
-              servants_skill_need.push(servant_skill_need)
-            }
-
-            let all_skill_need = servants_skill_need.reduce(push_items_together)
-            //console.log(all_skill_need)
-
-            
-            let servants_break_need = []
-            for (let level_break of level_breaks) {
-              let {servant_id, breaks} = level_break
-              //console.log(breaks)
-              let [bs_level_needs, total_needs, total] = data[servant_id]
-              let [word, break_needs] = bs_level_needs[0]
-              let servant_break_need = calc_skill_needs(break_needs, breaks)
-              servants_break_need.push(servant_break_need)
-            }
-
-            let all_break_need = servants_break_need.reduce(push_items_together)
-            //console.log(all_break_need)
-
-            let all_need = push_items_together(all_skill_need, all_break_need)
-            //console.log(all_need)
-            all_need.sort((x, y) => ordered_ids.indexOf(x[0]) - ordered_ids.indexOf(y[0]))
-            
-            for (let need of all_need) {
-              let need_span = $(`<span class="material-wrapper">
-                                  <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/${need[1]}.jpg">
-                                  <span>${need[2]}</span>
-                                </span>`)
-              result_div.append(need_span)
-            }
-            
-            }
+            global: false
           })
-
-
         }
 
         function get_exps_calc() {
           let url = '..../static/json/extra/levelup_exps_calc.json'
-          return $.getJSON(url, function(data){
-            dog_foods = 0
-            for (let servant_level_pair of level_pairs) {
-              let {level_pair} = servant_level_pair
-              let dog_food = calc_exps(data, level_pair)
-              //console.log(calc_exps(data, level_pair))
-              dog_foods += dog_food
-            }
-            let result_div = $('.materials.calc-result')
-            let need_food = $(`<span class="material-wrapper">
-                                <img class="item thumb" src="../static/images/material/dogfood.jpg">
-                                <span>${dog_foods}</span>
-                              </span>`)
-            result_div.append(need_food)
-            //console.log(dog_foods)
-          })
+          return $.getJSON(url)
         }
 
         //function
@@ -759,6 +832,17 @@
 
 
     })
+
+    function toThousands(num) {  
+      var num = (num || 0).toString(), result = '';  
+      while (num.length > 3) {  
+          result = ',' + num.slice(-3) + result;  
+          num = num.slice(0, num.length - 3);  
+      }  
+      if (num) { result = num + result; }  
+      return result;  
+    }  
+
 
     function ajax(param, callback){  
       $.ajax({  
