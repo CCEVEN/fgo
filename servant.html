@@ -1462,6 +1462,10 @@
           skill_pairs.push(servant)
         }
 
+
+        //localStorage.clear()
+
+
         //console.log(skill_pairs)
         //$.ajaxSettings.async = false;
         Promise
@@ -1475,8 +1479,6 @@
           let [break_data, together_datas, qp_cost, exps_data] = result
 
           let level_breaks = break_data_handler(break_data)
-
-          //localStorage.clear()
 
           set_local_storage('qp_cost', qp_cost)
           set_local_storage('break_data', break_data)
@@ -1632,10 +1634,11 @@
 
     })
 
+    let valid_len_data = {
+      'together_datas': 234852
+    }
+
     function get_local_storage(name, url) {
-      let valid_len_data = {
-        'together_datas': 234852
-      }
       let local = localStorage[name]
       if (local !== undefined) {
         if ( (name in valid_len_data && local.length === valid_len_data[name]) || !(name in valid_len_data) ){
@@ -1651,7 +1654,7 @@
 
     function set_local_storage(name, obj) {
       let local = localStorage[name]
-      if (local === undefined) {
+      if (local === undefined || (name in valid_len_data && local.length !== valid_len_data[name])) {
         localStorage[name] = JSON.stringify(obj)
       }
     }
