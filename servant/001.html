@@ -579,7 +579,10 @@
         Promise
           .all([get_break_data(), get_together_need(), get_qp_cost(), get_exps_calc()])
           .then(function (result) {
-            data_handler(result)
+            return data_handler(result)
+          })
+          .then((resp) => {
+            console.log(resp)
           })
 
         function data_handler(result) {
@@ -714,7 +717,7 @@
           return $.getJSON(url)
         }
 
-        function get_together_need (break_data) {
+        function get_together_need () {
           let url = '..../static/json/servant_need/together_need.json'
           return $.getJSON({
             url: url, 
@@ -965,6 +968,10 @@
 
             tr.find(`input[type='checkbox']`).on('change', function(){
               $(this).toggleClass('checked')
+            })
+
+            tr.find(`input[type='number']`).on('focus', function(){
+              $(this).select()
             })
 
             let url = '..../static/json/extra/skill/skill_names_compl.json'
