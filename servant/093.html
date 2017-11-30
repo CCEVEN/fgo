@@ -945,6 +945,10 @@
           skill_pairs.push(servant)
         }
 
+
+        //localStorage.clear()
+
+
         //console.log(skill_pairs)
         //$.ajaxSettings.async = false;
         Promise
@@ -952,14 +956,17 @@
           .then(function (result) {
             return data_handler(result)
           })
-          .then((resp) => {
-            console.log(resp)
-          })
+
 
         function data_handler(result) {
           let [break_data, together_datas, qp_cost, exps_data] = result
 
           let level_breaks = break_data_handler(break_data)
+
+          set_local_storage('qp_cost', qp_cost)
+          set_local_storage('break_data', break_data)
+          set_local_storage('exps_data', exps_data)
+          set_local_storage('together_datas', together_datas)
 
           together_data_handler(together_datas, level_breaks)
 
@@ -967,7 +974,6 @@
 
           qp_cost_handler(qp_cost, level_breaks)
 
-          return 'solved'
 
         }
 
@@ -1080,25 +1086,27 @@
 
         function get_qp_cost () {
           let url = '..../static/json/extra/qp_cost.json'
-          return $.getJSON(url)
+          let name = 'qp_cost'
+          return get_local_storage(name, url)
+
         }
 
         function get_break_data () {
           let url = '..../static/json/extra/star_break_levels.json'
-          return $.getJSON(url)
+          let name = 'break_data'
+          return get_local_storage(name, url)
         }
 
         function get_together_need () {
           let url = '..../static/json/servant_need/together_need.json'
-          return $.getJSON({
-            url: url, 
-            global: false
-          })
+          let name = 'together_datas'
+          return get_local_storage(name, url)
         }
 
         function get_exps_calc() {
           let url = '..../static/json/extra/levelup_exps_calc.json'
-          return $.getJSON(url)
+          let name = 'exps_data'
+          return get_local_storage(name, url)
         }
 
         //function
@@ -1108,6 +1116,31 @@
 
 
     })
+
+    let valid_len_data = {
+      'together_datas': 237355
+    }
+
+    function get_local_storage(name, url) {
+      let local = localStorage[name]
+      if (local !== undefined) {
+        if ( (name in valid_len_data && local.length === valid_len_data[name]) || !(name in valid_len_data) ){
+          return JSON.parse(local)
+        }    
+      }
+      return $.getJSON({
+        url: url,
+        global: false
+      })
+
+    }
+
+    function set_local_storage(name, obj) {
+      let local = localStorage[name]
+      if (local === undefined || (name in valid_len_data && local.length !== valid_len_data[name])) {
+        localStorage[name] = JSON.stringify(obj)
+      }
+    }
 
     function toThousands(num) {  
       var num = (num || 0).toString(), result = '';  
