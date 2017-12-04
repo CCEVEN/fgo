@@ -1,314 +1,359 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-  "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-  <head>
-    <title>FileNotFoundError: [Errno 2] No such file or directory: 'static/json/all_needed/82.json' // Werkzeug Debugger</title>
-    <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css"
-        type="text/css">
-    <!-- We need to make sure this has a favicon so that the debugger does
-         not by accident trigger a request to /favicon.ico which might
-         change the application state. -->
-    <link rel="shortcut icon"
-        href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
-    <script src="?__debugger__=yes&amp;cmd=resource&amp;f=jquery.js"></script>
-    <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
-    <script type="text/javascript">
-      var TRACEBACK = 2055722710184,
-          CONSOLE_MODE = false,
-          EVALEX = true,
-          EVALEX_TRUSTED = false,
-          SECRET = "vXi1QPFOlNvutXhG1GTO";
-    </script>
-  </head>
-  <body>
-    <div class="debugger">
-<h1>builtins.FileNotFoundError</h1>
-<div class="detail">
-  <p class="errormsg">FileNotFoundError: [Errno 2] No such file or directory: 'static/json/all_needed/82.json'</p>
-</div>
-<h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
-<div class="traceback">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
   
-  <ul><li><div class="frame" id="frame-2055722709456">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">2000</em>,
-      in <code class="function">__call__</code></h4>
-  <div class="source"><pre class="line before"><span class="ws">                </span>error = None</pre>
-<pre class="line before"><span class="ws">            </span>ctx.auto_pop(error)</pre>
-<pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">    </span>def __call__(self, environ, start_response):</pre>
-<pre class="line before"><span class="ws">        </span>&quot;&quot;&quot;Shortcut for :attr:`wsgi_app`.&quot;&quot;&quot;</pre>
-<pre class="line current"><span class="ws">        </span>return self.wsgi_app(environ, start_response)</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">    </span>def __repr__(self):</pre>
-<pre class="line after"><span class="ws">        </span>return '&lt;%s %r&gt;' % (</pre>
-<pre class="line after"><span class="ws">            </span>self.__class__.__name__,</pre>
-<pre class="line after"><span class="ws">            </span>self.name,</pre></div>
-</div>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi">
+  <meta name="renderer" content="webkit">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  
+  <title>FGO Items</title>
 
-<li><div class="frame" id="frame-2055722711416">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">1991</em>,
-      in <code class="function">wsgi_app</code></h4>
-  <div class="source"><pre class="line before"><span class="ws">        </span>try:</pre>
-<pre class="line before"><span class="ws">            </span>try:</pre>
-<pre class="line before"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
-<pre class="line before"><span class="ws">            </span>except Exception as e:</pre>
-<pre class="line before"><span class="ws">                </span>error = e</pre>
-<pre class="line current"><span class="ws">                </span>response = self.make_response(self.handle_exception(e))</pre>
-<pre class="line after"><span class="ws">            </span>return response(environ, start_response)</pre>
-<pre class="line after"><span class="ws">        </span>finally:</pre>
-<pre class="line after"><span class="ws">            </span>if self.should_ignore_error(error):</pre>
-<pre class="line after"><span class="ws">                </span>error = None</pre>
-<pre class="line after"><span class="ws">            </span>ctx.auto_pop(error)</pre></div>
-</div>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2246f09bef1daa9c8bcc3ddec3239f8e";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  
+  
+  <!-- <link rel="stylesheet" type="text/css" href="../static/css/layout.css"> -->
+  <style type="text/css">
 
-<li><div class="frame" id="frame-2055722709064">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">1567</em>,
-      in <code class="function">handle_exception</code></h4>
-  <div class="source"><pre class="line before"><span class="ws">            </span># if we want to repropagate the exception, we can attempt to</pre>
-<pre class="line before"><span class="ws">            </span># raise it with the whole traceback in case we can do that</pre>
-<pre class="line before"><span class="ws">            </span># (the function was actually called from the except part)</pre>
-<pre class="line before"><span class="ws">            </span># otherwise, we just raise the error again</pre>
-<pre class="line before"><span class="ws">            </span>if exc_value is e:</pre>
-<pre class="line current"><span class="ws">                </span>reraise(exc_type, exc_value, tb)</pre>
-<pre class="line after"><span class="ws">            </span>else:</pre>
-<pre class="line after"><span class="ws">                </span>raise e</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">        </span>self.log_exception((exc_type, exc_value, tb))</pre>
-<pre class="line after"><span class="ws">        </span>if handler is None:</pre></div>
-</div>
+    /* Layout */
+    html, body {
+      overflow:hidden;
+      overflow-y:auto;
+      overflow-x:hidden;
+    }
 
-<li><div class="frame" id="frame-2055722709120">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\_compat.py"</cite>,
-      line <em class="line">33</em>,
-      in <code class="function">reraise</code></h4>
-  <div class="source"><pre class="line before"><span class="ws">    </span>from io import StringIO</pre>
-<pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">    </span>def reraise(tp, value, tb=None):</pre>
-<pre class="line before"><span class="ws">        </span>if value.__traceback__ is not tb:</pre>
-<pre class="line before"><span class="ws">            </span>raise value.with_traceback(tb)</pre>
-<pre class="line current"><span class="ws">        </span>raise value</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">    </span>implements_to_string = _identity</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws"></span>else:</pre>
-<pre class="line after"><span class="ws">    </span>text_type = unicode</pre></div>
-</div>
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-<li><div class="frame" id="frame-2055722709736">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">1988</em>,
-      in <code class="function">wsgi_app</code></h4>
-  <div class="source"><pre class="line before"><span class="ws">        </span>ctx = self.request_context(environ)</pre>
-<pre class="line before"><span class="ws">        </span>ctx.push()</pre>
-<pre class="line before"><span class="ws">        </span>error = None</pre>
-<pre class="line before"><span class="ws">        </span>try:</pre>
-<pre class="line before"><span class="ws">            </span>try:</pre>
-<pre class="line current"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
-<pre class="line after"><span class="ws">            </span>except Exception as e:</pre>
-<pre class="line after"><span class="ws">                </span>error = e</pre>
-<pre class="line after"><span class="ws">                </span>response = self.make_response(self.handle_exception(e))</pre>
-<pre class="line after"><span class="ws">            </span>return response(environ, start_response)</pre>
-<pre class="line after"><span class="ws">        </span>finally:</pre></div>
-</div>
+    a, 
+    a:hover,
+    a:link,
+    a:active,
+    a:visited
+     {
+      text-decoration : none;
+    } 
+    
+    .flex-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
 
-<li><div class="frame" id="frame-2055722710128">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">1641</em>,
-      in <code class="function">full_dispatch_request</code></h4>
-  <div class="source"><pre class="line before"><span class="ws">            </span>request_started.send(self)</pre>
-<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
-<pre class="line before"><span class="ws">            </span>if rv is None:</pre>
-<pre class="line before"><span class="ws">                </span>rv = self.dispatch_request()</pre>
-<pre class="line before"><span class="ws">        </span>except Exception as e:</pre>
-<pre class="line current"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
-<pre class="line after"><span class="ws">        </span>response = self.make_response(rv)</pre>
-<pre class="line after"><span class="ws">        </span>response = self.process_response(response)</pre>
-<pre class="line after"><span class="ws">        </span>request_finished.send(self, response=response)</pre>
-<pre class="line after"><span class="ws">        </span>return response</pre>
-<pre class="line after"><span class="ws"></span> </pre></div>
-</div>
+      margin: 50px;
+    }
+    /* Layout */
 
-<li><div class="frame" id="frame-2055722712872">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">1544</em>,
-      in <code class="function">handle_user_exception</code></h4>
-  <div class="source"><pre class="line before"><span class="ws">            </span>return self.handle_http_exception(e)</pre>
-<pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">        </span>handler = self._find_error_handler(e)</pre>
-<pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">        </span>if handler is None:</pre>
-<pre class="line current"><span class="ws">            </span>reraise(exc_type, exc_value, tb)</pre>
-<pre class="line after"><span class="ws">        </span>return handler(e)</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">    </span>def handle_exception(self, e):</pre>
-<pre class="line after"><span class="ws">        </span>&quot;&quot;&quot;Default exception handling that kicks in when an exception</pre>
-<pre class="line after"><span class="ws">        </span>occurs that is not caught.  In debug mode the exception will</pre></div>
-</div>
 
-<li><div class="frame" id="frame-2055722710576">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\_compat.py"</cite>,
-      line <em class="line">33</em>,
-      in <code class="function">reraise</code></h4>
-  <div class="source"><pre class="line before"><span class="ws">    </span>from io import StringIO</pre>
-<pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">    </span>def reraise(tp, value, tb=None):</pre>
-<pre class="line before"><span class="ws">        </span>if value.__traceback__ is not tb:</pre>
-<pre class="line before"><span class="ws">            </span>raise value.with_traceback(tb)</pre>
-<pre class="line current"><span class="ws">        </span>raise value</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">    </span>implements_to_string = _identity</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws"></span>else:</pre>
-<pre class="line after"><span class="ws">    </span>text_type = unicode</pre></div>
-</div>
+    .heads {
+      width: 80%;
+      margin-top: 10px;
+    }
 
-<li><div class="frame" id="frame-2055722709960">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">1639</em>,
-      in <code class="function">full_dispatch_request</code></h4>
-  <div class="source"><pre class="line before"><span class="ws">        </span>self.try_trigger_before_first_request_functions()</pre>
-<pre class="line before"><span class="ws">        </span>try:</pre>
-<pre class="line before"><span class="ws">            </span>request_started.send(self)</pre>
-<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
-<pre class="line before"><span class="ws">            </span>if rv is None:</pre>
-<pre class="line current"><span class="ws">                </span>rv = self.dispatch_request()</pre>
-<pre class="line after"><span class="ws">        </span>except Exception as e:</pre>
-<pre class="line after"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
-<pre class="line after"><span class="ws">        </span>response = self.make_response(rv)</pre>
-<pre class="line after"><span class="ws">        </span>response = self.process_response(response)</pre>
-<pre class="line after"><span class="ws">        </span>request_finished.send(self, response=response)</pre></div>
-</div>
+    .head-img{
+      width: 97px;
+      height: 106px;
+      background-size: 97px, 106px;
+      margin: 4px 10px;
+    }
 
-<li><div class="frame" id="frame-2055722710968">
-  <h4>File <cite class="filename">"C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py"</cite>,
-      line <em class="line">1625</em>,
-      in <code class="function">dispatch_request</code></h4>
-  <div class="source"><pre class="line before"><span class="ws">        </span># request came with the OPTIONS method, reply automatically</pre>
-<pre class="line before"><span class="ws">        </span>if getattr(rule, 'provide_automatic_options', False) \</pre>
-<pre class="line before"><span class="ws">           </span>and req.method == 'OPTIONS':</pre>
-<pre class="line before"><span class="ws">            </span>return self.make_default_options_response()</pre>
-<pre class="line before"><span class="ws">        </span># otherwise dispatch to the handler for that endpoint</pre>
-<pre class="line current"><span class="ws">        </span>return self.view_functions[rule.endpoint](**req.view_args)</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">    </span>def full_dispatch_request(self):</pre>
-<pre class="line after"><span class="ws">        </span>&quot;&quot;&quot;Dispatches the request and on top of that performs request</pre>
-<pre class="line after"><span class="ws">        </span>pre and postprocessing as well as HTTP exception catching and</pre>
-<pre class="line after"><span class="ws">        </span>error handling.</pre></div>
-</div>
+    .items {
+      width: 70%;
+      margin: auto;
+      margin-top: 30px;
+    }
 
-<li><div class="frame" id="frame-2055722710632">
-  <h4>File <cite class="filename">"C:\Users\admin\Desktop\backup\11.12\fgotool\application.py"</cite>,
-      line <em class="line">25</em>,
-      in <code class="function">item</code></h4>
-  <div class="source"><pre class="line before"><span class="ws"></span>def item(item_id=None):</pre>
-<pre class="line before"><span class="ws">  </span>cur_tab = 'item'</pre>
-<pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">  </span>if item_id:</pre>
-<pre class="line before"><span class="ws"></span> </pre>
-<pre class="line current"><span class="ws">    </span>f = open('static/json/all_needed/{0}.json'.format(item_id), 'r')</pre>
-<pre class="line after"><span class="ws">    </span>item_name, item_need = json.loads(f.read()) # get needs from json</pre>
-<pre class="line after"><span class="ws">    </span>return render_template('item.html', item_name=item_name, item_id=item_id, item_need=item_need, cur_tab=cur_tab)</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">  </span>else:</pre>
-<pre class="line after"><span class="ws"></span> </pre></div>
-</div>
-</ul>
-  <blockquote>FileNotFoundError: [Errno 2] No such file or directory: 'static/json/all_needed/82.json'</blockquote>
-</div>
+    .item {
 
-<div class="plain">
-  <form action="/?__debugger__=yes&amp;cmd=paste" method="post">
-    <p>
-      <input type="hidden" name="language" value="pytb">
-      This is the Copy/Paste friendly version of the traceback.  <span
-      class="pastemessage">You can also paste this traceback into
-      a <a href="https://gist.github.com/">gist</a>:
-      <input type="submit" value="create paste"></span>
-    </p>
-    <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 2000, in __call__
-    return self.wsgi_app(environ, start_response)
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 1991, in wsgi_app
-    response = self.make_response(self.handle_exception(e))
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 1567, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\_compat.py&quot;, line 33, in reraise
-    raise value
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 1988, in wsgi_app
-    response = self.full_dispatch_request()
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 1641, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 1544, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\_compat.py&quot;, line 33, in reraise
-    raise value
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 1639, in full_dispatch_request
-    rv = self.dispatch_request()
-  File &quot;C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py&quot;, line 1625, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File &quot;C:\Users\admin\Desktop\backup\11.12\fgotool\application.py&quot;, line 25, in item
-    f = open('static/json/all_needed/{0}.json'.format(item_id), 'r')
-FileNotFoundError: [Errno 2] No such file or directory: 'static/json/all_needed/82.json'</textarea>
-  </form>
-</div>
-<div class="explanation">
-  The debugger caught an exception in your WSGI application.  You can now
-  look at the traceback which led to the error.  <span class="nojavascript">
-  If you enable JavaScript you can also use additional features such as code
-  execution (if the evalex feature is enabled), automatic pasting of the
-  exceptions and much more.</span>
-</div>
-      <div class="footer">
-        Brought to you by <strong class="arthur">DON'T PANIC</strong>, your
-        friendly Werkzeug powered traceback interpreter.
+    }
+
+    .item img{
+      width: 97px;
+      height: 106px;
+      margin: 10px;
+    }
+    
+
+    .item-back {
+      margin-left: 3%;
+      margin-top: 30px;
+    }
+
+    .num {
+      position: relative;
+      top: 60%;
+      color: white;
+      font-weight: bold;
+      -webkit-filter:
+         drop-shadow(1px 0px 0px black)
+         drop-shadow(0px 1px 0px black)
+         drop-shadow(0px -1px 0px black)
+         drop-shadow(-1px 0px 0px black);
+      filter:
+         drop-shadow(1px 0px 0px black)
+         drop-shadow(0px 1px 0px black)
+         drop-shadow(0px -1px 0px black)
+         drop-shadow(-1px 0px 0px black);
+    }
+
+    .num-1 {
+      left: 85%
+    }
+    .num-2 {
+      left: 75%;
+    }
+    .num-3 {
+      left: 65%
+    }
+
+    .delete, .delete-dropdown{
+      margin-left: 10px;
+    }
+
+    .delete-dropdown{
+      visibility: hidden;
+    }
+
+    @media screen and (max-width:  450px) {
+      .flex-container{
+        margin: 20px 10px;
+      }
+      .heads {
+        width: 90%;
+      }
+      .head-img {
+        width: 55px;
+        height: 60px;
+        background-size: 55px, 60px;
+        background-repeat: no-repeat;
+        margin: 4px 10px;
+      }
+      .items {
+        width: 90%;
+      }
+      .item img {
+        width: 55px;
+        height: 60px;
+        margin: 4px 10px;
+      }
+      .item .back {
+        width: 60px;
+        height: 66px; 
+      }
+      .num {
+        font-size: 10px;
+      }
+      .num-1 {
+        left: 80%
+      }
+      .num-2 {
+        left: 70%;
+      }
+      .num-3 {
+        left: 60%
+      }
+
+    }
+
+
+  </style>
+
+</head>
+<body>
+  
+  <ul class="nav nav-tabs">
+    <li class="nav-tab item"><a href="../item.html">Items</a></li>
+    <li class="nav-tab servant"><a href="../servant.html">Servants</a></li>
+    <li class="nav-tab drop"><a href="../drop.html">Drops</a></li>
+  </ul>
+
+  <div id="content">
+    
+      <div class="item back">
+        <img src="http://file.fgowiki.fgowiki.com/fgo/material/zhui.jpg">
       </div>
+    <div>
+
+      <p><button class="btn btn-default delete" data-toggle="button">Delete Mode</button></p>
+
+      <div class="btn-group delete-dropdown">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Delete By
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="javascript:;" class="delete-by star-below-5">Star below 5</a></li>
+          <li><a href="javascript:;" class="delete-by star-below-4">Star below 4</a></li>
+          <li class="divider"></li>
+          <li><a href="javascript:;" class="delete-by star-5">Star 5</a></li>
+          <li><a href="javascript:;" class="delete-by star-4">Star 4</a></li>
+          <li><a href="javascript:;" class="delete-by star-3">Star 3</a></li>
+          <li><a href="javascript:;" class="delete-by star-2">Star 2</a></li>
+          <li><a href="javascript:;" class="delete-by star-1">Star 1</a></li>
+        </ul>
+      </div>
+
+        <div class="break flex-container total-container">
+        
+          <h3 class="total">break: 24</h3>
+
+          <div class="flex-container heads">
+              <div class="flex-item head">
+                <a href="../servant/194.html" data-num="194">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/194.jpg);">
+                        <span class="num num-2">24</span>
+                  </div> 
+                </a>
+              </div>
+          </div>
+
+        </div>
+        <div class="skill flex-container total-container">
+        
+          <h3 class="total">skill: 288</h3>
+
+          <div class="flex-container heads">
+              <div class="flex-item head">
+                <a href="../servant/192.html" data-num="192">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/192.jpg);">
+                        <span class="num num-3">180</span>
+                  </div> 
+                </a>
+              </div>
+              <div class="flex-item head">
+                <a href="../servant/194.html" data-num="194">
+                  <div class="head-img" style="background-image:url(http://file.fgowiki.fgowiki.com/fgo/head/194.jpg);">
+                        <span class="num num-3">108</span>
+                  </div> 
+                </a>
+              </div>
+          </div>
+
+        </div>
     </div>
 
-    <div class="pin-prompt">
-      <div class="inner">
-        <h3>Console Locked</h3>
-        <p>
-          The console is locked and needs to be unlocked by entering the PIN.
-          You can find the PIN printed out on the standard output of your
-          shell that runs the server.
-        <form>
-          <p>PIN:
-            <input type=text name=pin size=14>
-            <input type=submit name=btn value="Confirm Pin">
-        </form>
-      </div>
-    </div>
-  </body>
+
+  </div>
+
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/2.3.1/js/bootstrap-button.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/2.3.1/js/bootstrap-button.js"></script>
+    
+  
+<script type="text/javascript">
+  $(document).ready(function () {
+
+    activate_tab()
+
+    let heads = $('.flex-item.head a');
+    let break_heads = $('.break .flex-item.head a');
+    let skill_heads = $('.skill .flex-item.head a');
+    let nums = [[], []]
+
+    nums[0] = get_eles_attr(break_heads, 'data-num')
+    nums[1] = get_eles_attr(skill_heads, 'data-num')
+
+    content = $('#content')
+    $('.delete').on('click', function(){
+      content.toggleClass('delete-mode')
+      if (content.hasClass('delete-mode')) {
+        bind_delete(break_heads, 'break')
+        bind_delete(skill_heads, 'skill')
+        $('.delete-dropdown').css('visibility', 'visible')
+      } else {
+        break_heads.off('click')
+        skill_heads.off('click')
+        $('.delete-dropdown').css('visibility', 'hidden')
+        for (let i = 0; i < break_heads.length; i++) {
+          $(break_heads[i]).attr('href', `../servant/${nums[0][i]}.html`)
+        }
+        for (let i = 0; i < skill_heads.length; i++) {
+          $(skill_heads[i]).attr('href', `/servant/${nums[1][i]}/`)
+        }
+      }
+    })
+
+
+    //url = `../..../static/json/about_ids_names/servant_ids_by_star.json`
+    url = '../static/json/about_ids_names/servant_ids_by_star.json'
+    $.getJSON(url, function(data){
+      for (let i = 1; i <= 5; i++) {
+        $(`.delete-by.star-${i}`).on('click', function(){
+          for (let head of heads) {
+            if (data[i].indexOf($(head).attr('data-num')) !== -1) {
+              head.click()
+            }
+          }
+        })
+      }
+
+      for (let i = 4; i <= 5; i++) {
+        $(`.delete-by.star-below-${i}`).on('click', function(){
+          for (let head of heads) {
+            for (let j = 0; j <= i-1; j++) {
+              if (data[j].indexOf($(head).attr('data-num')) !== -1) {
+                head.click()
+              }
+            }
+
+          }
+        })
+      }
+
+    })
+   
+  })
+
+  function activate_tab() {
+    let cur_tab = $('.nav-tab.item')
+    cur_tab.addClass('active')
+  }
+
+  function get_eles_attr(eles, attr_name) {
+    let attrs = []
+    for (let i = 0; i < eles.length; i++) {
+      attrs.push($(eles[i]).attr(attr_name))
+    }
+    return attrs
+  }
+
+  function bind_delete(heads) {
+    heads.attr('href', 'javascript:;')
+    // Bind click: Delete servant and subtract the needed material
+    heads.on('click', function(){
+      subtract_num(this)
+    })
+  }
+
+  function subtract_num(head) {
+    let material_num = Number($(head).find('span.num').text())
+    let total = $(head).parents('.total-container').children('.total')
+    let total_text = total.text()
+    let pat = /([a-z]+): (\d+)/
+    let reg_result = pat.exec(total_text)
+    let total_num = Number(reg_result[2])
+    $(head).remove()
+    total_num -= material_num
+    total.text(reg_result[1] + ': ' + total_num)
+  }
+
+
+</script>
+
+  
+
+</body>
 </html>
-
-<!--
-
-Traceback (most recent call last):
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 2000, in __call__
-    return self.wsgi_app(environ, start_response)
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 1991, in wsgi_app
-    response = self.make_response(self.handle_exception(e))
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 1567, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\_compat.py", line 33, in reraise
-    raise value
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 1988, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 1641, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 1544, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\_compat.py", line 33, in reraise
-    raise value
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 1639, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\admin\AppData\Local\Programs\Python\Python35\lib\site-packages\flask\app.py", line 1625, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\admin\Desktop\backup\11.12\fgotool\application.py", line 25, in item
-    f = open('static/json/all_needed/{0}.json'.format(item_id), 'r')
-FileNotFoundError: [Errno 2] No such file or directory: 'static/json/all_needed/82.json'
-
--->
