@@ -166,6 +166,7 @@
     .item.thumb + span {
       position: relative;
       top: 2vw;
+      left: .3vw;
     }
     
     .material-wrapper a + span {
@@ -458,7 +459,7 @@
                 </span>
 
                 <span class="material-wrapper">
-                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/zhui.jpg">
+                      <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/zhui.jpg">
                   <span>15</span>
                 </span>
 
@@ -468,7 +469,7 @@
 
 
                 <span class="material-wrapper">
-                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/zhui.jpg">
+                      <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/zhui.jpg">
                   <span>45</span>
                 </span>
 
@@ -485,7 +486,7 @@
 
 
                 <span class="material-wrapper">
-                    <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/cubes.jpg">
+                      <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/cubes.jpg">
                   <span>1</span>
                 </span>
 
@@ -500,7 +501,7 @@
       
       <div class="materials">
         <span class="material-wrapper">
-          <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/zhui.jpg">
+            <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/zhui.jpg">
           <span>180</span>
         </span>
         <span class="material-wrapper">
@@ -534,7 +535,7 @@
           <span>29</span>
         </span>
         <span class="material-wrapper">
-          <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/cubes.jpg">
+            <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/cubes.jpg">
           <span>3</span>
         </span>
         <span class="material-wrapper">
@@ -745,7 +746,7 @@
           let result_div = $('.materials.calc-result')
           let need_qp = $(`<span class="material-wrapper">
                               <img class="item thumb" src="../static/images/material/qp.jpg">
-                              <span style="position:relative;left:5vw;top:-2vw;">${all_need_qp}</span>
+                              <span style="position:relative; left:5.2vw; top:-2vw;">${all_need_qp}</span>
                             </span>`)
           result_div.append(need_qp)
         }
@@ -797,10 +798,25 @@
           all_need.sort((x, y) => ordered_ids.indexOf(x[0]) - ordered_ids.indexOf(y[0]))
           
           for (let need of all_need) {
-            let need_span = $(`<span class="material-wrapper">
-                                <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/${need[1]}.jpg">
-                                <span>${need[2]}</span>
-                              </span>`)
+            // let need_span = $(`<span class="material-wrapper">
+            //                     <img class="item thumb" src="http://file.fgowiki.fgowiki.com/fgo/material/${need[1]}.jpg">
+            //                     <span>${need[2]}</span>
+            //                   </span>`)
+
+            let need_span = $('<span class="material-wrapper"></span>')
+
+            let src1 = `http://file.fgowiki.fgowiki.com/fgo/material/${need[1]}.jpg`
+            let src2 = `../static/images/material/${need[1]}.jpg`
+            let src = (need[1] === 'Kfc')? src2: src1
+
+            let span_img = $('<img>', {
+              class: 'item thumb',
+              src: src
+            })
+            let span_num = $(`<span>${need[2]}</span>`)
+
+            need_span.append(span_img)
+            need_span.append(span_num)
             result_div.append(need_span)
           }
         }
@@ -818,6 +834,7 @@
                               <img class="item thumb" src="../static/images/material/dogfood.jpg">
                               <span>${dog_foods}</span>
                             </span>`)
+          need_food.find('span').css('left', '0vw')
           result_div.append(need_food)
           //console.log(dog_foods)
         }
