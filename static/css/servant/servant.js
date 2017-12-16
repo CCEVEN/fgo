@@ -240,11 +240,10 @@ $(document).ready(function(){
 
       let head = heads.filter(`[data_num='${servant_id}']`)
       // console.log(head.css('display'))
-      if (head.css('display') !== 'none') {
-        head.trigger('click', [ level_pair, skill_pairs[index] ])
-        // $(`tr[data_num='${servant_id}'] .delete`).click()
+      if (head.css('display') == 'none') {
+        $(`tr[data_num='${servant_id}'] .delete`).click()
       }
-      
+      head.trigger('click', [ level_pair, skill_pairs[index] ])
       
     })
   })
@@ -307,7 +306,7 @@ function get_level_skill_pairs() {
 }
 
 let valid_len_data = {
-  'together_datas': 239951
+  'together_datas': 242082
 }
 
 function get_local_storage(name, url) {
