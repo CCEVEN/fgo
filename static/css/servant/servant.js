@@ -170,7 +170,7 @@ $(document).ready(function(){
         let need_span = $('<span class="material-wrapper"></span>')
 
         let src1 = `http://file.fgowiki.fgowiki.com/fgo/material/${need[1]}.jpg`
-        let src2 = `../static/images/material/${need[1]}.jpg`
+        let src2 = `./static/images/material/${need[1]}.jpg`
         let src = (need[1] === 'Kfc')? src2: src1
 
         let span_img = $('<img>', {
