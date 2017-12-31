@@ -52,7 +52,7 @@ $(document).ready(function(){
   calc.on('click', function () {
 
     let [level_pairs, skill_pairs] = get_level_skill_pairs()
-    // localStorage.clear()
+    //localStorage.clear()
 
 
     //console.log(skill_pairs)
@@ -306,7 +306,7 @@ function get_level_skill_pairs() {
 }
 
 let valid_len_data = {
-  'together_datas': 243425
+  'together_datas': 242082
 }
 
 function get_local_storage(name, url) {
